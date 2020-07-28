@@ -1,0 +1,15 @@
+version: "3.4"
+
+services:
+
+  Nexus:
+
+#    image: sonatype/nexus3
+    image: nexus:latest
+    ports:
+      - 9991:8081
+
+    volumes:
+      - /home/boddpru/nexus/:/sonatype-work
+
+    restart: unless-stopped

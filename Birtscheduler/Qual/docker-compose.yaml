@@ -1,0 +1,31 @@
+version: '2.2'
+services:
+  nginxproxy:
+    container_name: nginxproxy
+    image: digitalunit4ksb/ksb_nginx_birtscheduler:qual
+    ports:
+      - 80:80
+    depends_on:
+      - birtscheduler
+
+  birtscheduler:
+    image: digitalunit4ksb/birtscheduler:qual
+    ports:
+      - 8085
+    environment:
+      - birtscheduler.corepoolsize=6
+      - birtscheduler.maxpoolsize=25
+      - birtscheduler.keepalivetime=150
+      - birtscheduler.queuesize=150
+      - birtscheduler.intervalperiod=60
+      - birtscheduler.statusfilepath=/app/status
+    volumes:
+      -  /mnt/vnbasedcq/KSBase:/app/KSBase
+      - ./status:/app/status
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "10m"
+        max-file: "3"
+    cpus: "0.8"
+    restart: unless-stopped

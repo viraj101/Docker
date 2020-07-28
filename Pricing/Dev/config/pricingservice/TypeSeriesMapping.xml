@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+Stefan Weinschütz:
+The main purpose of this file, is to make the version for a typeseries configurable.
+The file is readed every time a call to Camos is done. So a change in the file has to be considerer
+active directly.
+
+The file can also be used to test the system, for example with a non existing typeseries.
+E.g. "E04B_Mock" can be mapped to the real "E04B". The mapping happens before Camos is called.
+So the cache will be filled with the "E04B_Mock". With this we can monitor the availability of the system at runtime.
+-->
+<MappingCollection>
+	<Mapping>
+		<From>
+			<TypeSeries>N00A</TypeSeries>
+		</From>
+		<To>
+			<TypeSeries>N00A</TypeSeries>
+			<Version>11001.1w</Version>
+		</To>
+	</Mapping>
+	<Mapping>
+		<From>
+			<TypeSeries>N00A_Test</TypeSeries>
+		</From>
+		<To>
+			<TypeSeries>N00A</TypeSeries>
+			<Version>11001.1w</Version>
+		</To>
+	</Mapping>
+	<Mapping>
+		<From>
+			<TypeSeries>E04B</TypeSeries>
+		</From>
+		<To>
+			<TypeSeries>E04B</TypeSeries>
+			<Version>3000.1w</Version>
+		</To>
+	</Mapping>
+	<Mapping>
+		<From>
+			<TypeSeries>E04B_Test</TypeSeries>
+		</From>
+		<To>
+			<TypeSeries>E04B</TypeSeries>
+			<Version>3000.1w</Version>
+		</To>
+	</Mapping>
+	<Mapping>
+		<From>
+			<TypeSeries>N02A</TypeSeries>
+		</From>
+		<To>
+			<TypeSeries>N02A</TypeSeries>
+			<Version>9004.1w</Version>
+		</To>
+	</Mapping>
+	<Mapping>
+		<From>
+			<TypeSeries>N05A</TypeSeries>
+		</From>
+		<To>
+			<TypeSeries>N05A</TypeSeries>
+			<Version>13000.1w</Version>
+		</To>
+	</Mapping>
+	<Mapping>
+		<From>
+			<TypeSeries>A31B</TypeSeries>
+		</From>
+		<To>
+			<TypeSeries>A31B</TypeSeries>
+			<Version>8004.1w</Version>
+		</To>
+	</Mapping>
+	<Mapping>
+		<From>
+			<TypeSeries>P10A</TypeSeries>
+		</From>
+		<To>
+			<TypeSeries>P10A</TypeSeries>
+			<Version>1000.1w</Version>
+		</To>
+	</Mapping>
+	<Mapping>
+		<From>
+			<TypeSeries>E01B</TypeSeries>
+		</From>
+		<To>
+			<TypeSeries>E01B</TypeSeries>
+			<Version>6001.1.0W</Version>
+		</To>
+	</Mapping>
+</MappingCollection>

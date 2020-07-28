@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+Stefan Weinschütz:
+The XML comming from camos must be enriched by several informations.
+E.g: Customer, SalesOrganization, Currency.
+-->
+<PriceResolverConfig>
+	<Customer>897501001</Customer>
+	<Currency>EUR</Currency>
+	<SalesOrganization>1032</SalesOrganization>
+</PriceResolverConfig>

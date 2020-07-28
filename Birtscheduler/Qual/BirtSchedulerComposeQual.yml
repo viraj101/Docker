@@ -1,0 +1,15 @@
+version: '2'
+services:
+  birtscheduler_qual:
+    image: digitalunit4ksb/birtscheduler:qual
+    ports:
+      - "55730:8085"
+    environment:
+      - birtscheduler.corepoolsize=8
+      - birtscheduler.maxpoolsize=25
+      - birtscheduler.keepalivetime=250
+      - birtscheduler.queuesize=250
+      - birtscheduler.intervalperiod=60
+    volumes:
+      -  /mnt/vnbasedcq/KSBase:/app/KSBase
+    restart: unless-stopped

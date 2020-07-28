@@ -1,0 +1,18 @@
+version: '3.4'
+
+services:
+  eureka_nginx:
+   # image: digitalunit4ksb/eureka:hydraui.develop
+    image: digitalunit4ksb/eureka:develop
+    ports:
+      - 81:80
+    restart: unless-stopped
+    depends_on:
+      - eureka_searcherservice
+
+  eureka_searcherservice:
+  #  image: digitalunit4ksb/eureka:searcherservice.develop
+    image: docker pull digitalunit4ksb/eureka_frontend:develop
+    ports:
+      - 8190:8090
+    restart: unless-stopped

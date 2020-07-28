@@ -1,0 +1,32 @@
+[req]
+distinguished_name = req_distinguished_name
+req_extensions = v3_req
+
+[req_distinguished_name]
+countryName = Country Name (2 letter code)
+countryName_default = DE
+stateOrProvinceName = State or Province Name (full name)
+stateOrProvinceName_default = Renania-Palatinat
+localityName = Locality Name (eg, city)
+localityName_default = Frankenthal
+organizationName = Organization Name
+organizationName_default = KSB SE & Co. KGaA
+organizationalUnitName = Organizational Unit Name (eg, section)
+organizationalUnitName_default = IT
+commonName = Common Name (FQDN)
+commonName_default = pumptest2.local
+commonName_max    = 64
+
+[ v3_req ]
+# Extensions to add to a certificate request
+basicConstraints = CA:FALSE
+keyUsage = nonRepudiation, digitalSignature, keyEncipherment
+subjectAltName = @alt_names
+
+[alt_names]
+DNS.1 = pumptest2-c.westeurope.cloudapp.azure.com
+DNS.2 = vndckr1c
+DNS.3 = pumptest2.local
+IP.1  = 10.214.5.153
+IP.2  = 30.4.10.153
+IP.3  = 127.0.0.1

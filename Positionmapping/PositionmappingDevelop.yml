@@ -1,0 +1,8 @@
+version: '3.4'
+
+services:
+  variantcacheservice:
+    image:digitalunit4ksb/positionmappingservice:1.0.3
+    ports:
+      - "8080:8080"
+

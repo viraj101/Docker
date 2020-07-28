@@ -1,0 +1,64 @@
+version: '3.4'
+
+services:
+  variantcacheservice-qual:
+    image: digitalunit4ksb/variantcacheservice:develop
+    environment:
+      - REDISPORT=6379
+      - LIVETIME_EUREKA=8760  #hours #One year
+      - LIVETIME_KSBASE=168    #hours
+    ports:
+      - "55816:80"
+    links:
+      - redis-qual
+      
+  pricingservice-qual:
+    image: digitalunit4ksb/pricingservice:develop
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ASPNETCORE_URLS=http://+:80
+      - CAMOSWORKERCOUNT=5
+      - PRICERESOLVERWORKERCOUNT=20
+      - CACHEFILLINGWORKERCOUNT=20
+      - CAMOSURL=http://vnbase1c.emea.ksb.intern:23602
+      - Server=10.214.4.76
+      - Database=MBASEP_C
+      - DatabaseUser=SVC-CUUR
+      - DatabasePassword=@WSX2wsx
+      - PricingResolverUrl=http://pricingresolver-qual
+      - VariantCacheServiceUrl=http://variantcacheservice-qual
+    volumes:
+    - ./config/pricingservice:/app/config
+    ports:
+      - "55817:80"
+    links:
+      - variantcacheservice-qual
+      
+  redis-qual:
+    container_name: redis-qual
+    image: redis:5
+    command: redis-server --appendonly yes
+    ports:
+      - 7379
+    volumes:
+      - redis-qual:/data
+      
+  pricingresolver-qual:
+    image: digitalunit4ksb/pricingresolver:develop
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+    ports:
+      - "55819:80"
+  
+  pricingwarmup-qual:
+    image: digitalunit4ksb/pricingwarmup:develop
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development  #swagger only in debug
+    ports:
+      - "55818:80"
+
+networks:
+  default:
+volumes:
+  redis-qual:
+

@@ -1,0 +1,1365 @@
+{
+	"valuestore": {
+		"width": {
+			"calcultionValueUnit": "undefined",
+			"value": 12.0
+		},
+		"depth": {
+			"calcultionValueUnit": "undefined",
+			"value": 13.0
+		},
+		"height": {
+			"calcultionValueUnit": "undefined",
+			"value": 14.0
+		},
+		"specDensityPb": {
+			"calcultionValueUnit": "undefined",
+			"value": 11.35
+		},
+		"specDensityFe": {
+			"calcultionValueUnit": "undefined",
+			"value": 7.87
+		},
+		"specDensityAu": {
+			"calcultionValueUnit": "undefined",
+			"value": 19.3
+		},
+		"specDensityU": {
+			"calcultionValueUnit": "undefined",
+			"value": 19.05
+		},
+		"PI": {
+			"calcultionValueUnit": "undefined",
+			"value": 3.141592653589793
+		},
+		"2PI": {
+			"calcultionValueUnit": "undefined",
+			"value": 6.283185307179586
+		},
+		"g": {
+			"calcultionValueUnit": "undefined",
+			"value": 9.80665
+		},
+		"zmeasure_DS": {
+			"calcultionValueUnit": "undefined",
+			"value": 5.94
+		},
+		"p_DS": {
+			"calcultionValueUnit": "undefined",
+			"value": 350000.0
+		},
+		"Hmeasure_DS": {
+			"calcultionValueUnit": "undefined",
+			"value": 105.892
+		},
+		"zmeasure_SS": {
+			"calcultionValueUnit": "undefined",
+			"value": 5.94
+		},
+		"p_SS": {
+			"calcultionValueUnit": "undefined",
+			"value": 350000.0
+		},
+		"rho_SS": {
+			"calcultionValueUnit": "undefined",
+			"value": 1000.0
+		},
+		"Hmeasure_SS": {
+			"calcultionValueUnit": "undefined",
+			"value": 25.0
+		},
+		"zimpeller": {
+			"calcultionValueUnit": "undefined",
+			"value": 1.5
+		},
+		"psteam": {
+			"calcultionValueUnit": "undefined",
+			"value": 12000.0
+		},
+		"NPSH": {
+			"calcultionValueUnit": "undefined",
+			"value": 21.776
+		},
+		"D_DS": {
+			"calcultionValueUnit": "undefined",
+			"value": 0.15
+		},
+		"u_DS": {
+			"calcultionValueUnit": "undefined",
+			"value": 5.507
+		},
+		"Q_SS": {
+			"calcultionValueUnit": "undefined",
+			"value": 0.095
+		},
+		"D_SS": {
+			"calcultionValueUnit": "undefined",
+			"value": 0.15
+		},
+		"u_SS": {
+			"calcultionValueUnit": "undefined",
+			"value": 5.507
+		},
+		"zeta_DS": {
+			"calcultionValueUnit": "undefined",
+			"value": 0.3
+		},
+		"uloss_DS": {
+			"calcultionValueUnit": "undefined",
+			"value": 5.0
+		},
+		"Hloss_DS": {
+			"calcultionValueUnit": "undefined",
+			"value": 0.382
+		},
+		"zeta_SS": {
+			"calcultionValueUnit": "undefined",
+			"value": 0.3
+		},
+		"uloss_SS": {
+			"calcultionValueUnit": "undefined",
+			"value": 5.0
+		},
+		"Hloss_SS": {
+			"calcultionValueUnit": "undefined",
+			"value": 0.382
+		},
+		"etamot": {
+			"calcultionValueUnit": "undefined",
+			"value": 0.9
+		},
+		"Pmotor": {
+			"calcultionValueUnit": "undefined",
+			"value": 10000.0
+		},
+		"Pshaft_el": {
+			"calcultionValueUnit": "undefined",
+			"value": 9000.0
+		},
+		"torque": {
+			"calcultionValueUnit": "undefined",
+			"value": 5.0
+		},
+		"speed": {
+			"calcultionValueUnit": "undefined",
+			"value": 1000.0
+		},
+		"constTwoPI": {
+			"calcultionValueUnit": "undefined",
+			"value": 6.283185307179586
+		},
+		"powerMechanical": {
+			"calcultionValueUnit": "undefined",
+			"value": 31415.925
+		},
+		"Torque": {
+			"calcultionValueUnit": "undefined",
+			"value": 5.0
+		},
+		"Speed": {
+			"calcultionValueUnit": "undefined",
+			"value": 2000.0
+		},
+		"Pshaft_mech": {
+			"calcultionValueUnit": "undefined",
+			"value": 62831.855
+		}
+	},
+	"calculationstore": {
+		"Pshaft_mech": {
+			"instructionStack": [
+				{
+					"expectedUnit": "undefined",
+					"instructionCode": 1,
+					"operand": {
+						"calcultionValueUnit": "undefined",
+						"value": "Torque"
+					}
+				},
+				{
+					"expectedUnit": "undefined",
+					"instructionCode": 1,
+					"operand": {
+						"calcultionValueUnit": "undefined",
+						"value": "Speed"
+					}
+				},
+				{
+					"expectedUnit": "undefined",
+					"instructionCode": 1,
+					"operand": {
+						"calcultionValueUnit": "undefined",
+						"value": "2PI"
+					}
+				},
+				{
+					"expectedUnit": "undefined",
+					"instructionCode": 9,
+					"operand": null
+				},
+				{
+					"expectedUnit": "undefined",
+					"instructionCode": 9,
+					"operand": null
+				},
+				{
+					"expectedUnit": "undefined",
+					"instructionCode": 2,
+					"operand": {
+						"calcultionValueUnit": "undefined",
+						"value": "Pshaft_mech"
+					}
+				}
+			],
+			"valueStack": [
+			],
+			"identifier": "Pshaft_mech",
+			"unit": null,
+			"success": true,
+			"producedOutputvalue": "none",
+			"documentedFormula": "none",
+			"descriptionLongtext": "none"
+		},
+		"powerMechanical": {
+			"instructionStack": [
+				{
+					"expectedUnit": "undefined",
+					"instructionCode": 1,
+					"operand": {
+						"calcultionValueUnit": "undefined",
+						"value": "torque"
+					}
+				},
+				{
+					"expectedUnit": "undefined",
+					"instructionCode": 1,
+					"operand": {
+						"calcultionValueUnit": "undefined",
+						"value": "speed"
+					}
+				},
+				{
+					"expectedUnit": "undefined",
+					"instructionCode": 1,
+					"operand": {
+						"calcultionValueUnit": "undefined",
+						"value": "constTwoPI"
+					}
+				},
+				{
+					"expectedUnit": "undefined",
+					"instructionCode": 9,
+					"operand": null
+				},
+				{
+					"expectedUnit": "undefined",
+					"instructionCode": 9,
+					"operand": null
+				},
+				{
+					"expectedUnit": "undefined",
+					"instructionCode": 2,
+					"operand": {
+						"calcultionValueUnit": "undefined",
+						"value": "powerMechanical"
+					}
+				}
+			],
+			"valueStack": [
+			],
+			"identifier": "powerMechanical",
+			"unit": null,
+			"success": true,
+			"producedOutputvalue": "none",
+			"documentedFormula": "none",
+			"descriptionLongtext": "none"
+		},
+		"surface": {
+			"instructionStack": [
+				{
+					"expectedUnit": "undefined",
+					"instructionCode": 1,
+					"operand": {
+						"calcultionValueUnit": "undefined",
+						"value": "width"
+					}
+				},
+				{
+					"expectedUnit": "undefined",
+					"instructionCode": 1,
+					"operand": {
+						"calcultionValueUnit": "undefined",
+						"value": "depth"
+					}
+				},
+				{
+					"expectedUnit": "undefined",
+					"instructionCode": 9,
+					"operand": null
+				},
+				{
+					"expectedUnit": "undefined",
+					"instructionCode": 2,
+					"operand": {
+						"calcultionValueUnit": "undefined",
+						"value": "surface"
+					}
+				}
+			],
+			"valueStack": null,
+			"identifier": "surface",
+			"unit": null,
+			"success": false,
+			"producedOutputvalue": "none",
+			"documentedFormula": "none",
+			"descriptionLongtext": "none"
+		},
+		"Phyd": {
+			"instructionStack": [
+				{
+					"expectedUnit": "undefined",
+					"instructionCode": 1,
+					"operand": {
+						"calcultionValueUnit": "undefined",
+						"value": "H"
+					}
+				},
+				{
+					"expectedUnit": "undefined",
+					"instructionCode": 1,
+					"operand": {
+						"calcultionValueUnit": "undefined",
+						"value": "g"
+					}
+				},
+				{
+					"expectedUnit": "undefined",
+					"instructionCode": 1,
+					"operand": {
+						"calcultionValueUnit": "undefined",
+						"value": "Q_DS"
+					}
+				},
+				{
+					"expectedUnit": "undefined",
+					"instructionCode": 1,
+					"operand": {
+						"calcultionValueUnit": "undefined",
+						"value": "rho_DS"
+					}
+				},
+				{
+					"expectedUnit": "undefined",
+					"instructionCode": 9,
+					"operand": null
+				},
+				{
+					"expectedUnit": "undefined",
+					"instructionCode": 9,
+					"operand": null
+				},
+				{
+					"expectedUnit": "undefined",
+					"instructionCode": 9,
+					"operand": null
+				},
+				{
+					"expectedUnit": "undefined",
+					"instructionCode": 2,
+					"operand": {
+						"calcultionValueUnit": "undefined",
+						"value": "Phyd"
+					}
+				}
+			],
+			"valueStack": [
+			],
+			"identifier": "Phyd",
+			"unit": null,
+			"success": true,
+			"producedOutputvalue": "none",
+			"documentedFormula": "none",
+			"descriptionLongtext": "none"
+		},
+		"H": {
+			"instructionStack": [
+				{
+					"expectedUnit": "undefined",
+					"instructionCode": 1,
+					"operand": {
+						"calcultionValueUnit": "undefined",
+						"value": "Hmeasure_DS"
+					}
+				},
+				{
+					"expectedUnit": "undefined",
+					"instructionCode": 1,
+					"operand": {
+						"calcultionValueUnit": "undefined",
+						"value": "Hmeasure_SS"
+					}
+				},
+				{
+					"expectedUnit": "undefined",
+					"instructionCode": 8,
+					"operand": null
+				},
+				{
+					"expectedUnit": "undefined",
+					"instructionCode": 1,
+					"operand": {
+						"calcultionValueUnit": "undefined",
+						"value": "Hloss_DS"
+					}
+				},
+				{
+					"expectedUnit": "undefined",
+					"instructionCode": 1,
+					"operand": {
+						"calcultionValueUnit": "undefined",
+						"value": "Hloss_SS"
+					}
+				},
+				{
+					"expectedUnit": "undefined",
+					"instructionCode": 7,
+					"operand": null
+				},
+				{
+					"expectedUnit": "undefined",
+					"instructionCode": 7,
+					"operand": null
+				},
+				{
+					"expectedUnit": "undefined",
+					"instructionCode": 2,
+					"operand": {
+						"calcultionValueUnit": "undefined",
+						"value": "H"
+					}
+				}
+			],
+			"valueStack": [
+			],
+			"identifier": "H",
+			"unit": null,
+			"success": true,
+			"producedOutputvalue": "none",
+			"documentedFormula": "none",
+			"descriptionLongtext": "none"
+		},
+		"weight": {
+			"instructionStack": [
+				{
+					"expectedUnit": "undefined",
+					"instructionCode": 1,
+					"operand": {
+						"calcultionValueUnit": "undefined",
+						"value": "volume"
+					}
+				},
+				{
+					"expectedUnit": "undefined",
+					"instructionCode": 1,
+					"operand": {
+						"calcultionValueUnit": "undefined",
+						"value": "specDensityPb"
+					}
+				},
+				{
+					"expectedUnit": "undefined",
+					"instructionCode": 9,
+					"operand": null
+				},
+				{
+					"expectedUnit": "undefined",
+					"instructionCode": 2,
+					"operand": {
+						"calcultionValueUnit": "undefined",
+						"value": "weightPb"
+					}
+				},
+				{
+					"expectedUnit": "undefined",
+					"instructionCode": 1,
+					"operand": {
+						"calcultionValueUnit": "undefined",
+						"value": "volume"
+					}
+				},
+				{
+					"expectedUnit": "undefined",
+					"instructionCode": 1,
+					"operand": {
+						"calcultionValueUnit": "undefined",
+						"value": "specDensityFe"
+					}
+				},
+				{
+					"expectedUnit": "undefined",
+					"instructionCode": 9,
+					"operand": null
+				},
+				{
+					"expectedUnit": "undefined",
+					"instructionCode": 2,
+					"operand": {
+						"calcultionValueUnit": "undefined",
+						"value": "weightFe"
+					}
+				},
+				{
+					"expectedUnit": "undefined",
+					"instructionCode": 1,
+					"operand": {
+						"calcultionValueUnit": "undefined",
+						"value": "volume"
+					}
+				},
+				{
+					"expectedUnit": "undefined",
+					"instructionCode": 1,
+					"operand": {
+						"calcultionValueUnit": "undefined",
+						"value": "specDensityAu"
+					}
+				},
+				{
+					"expectedUnit": "undefined",
+					"instructionCode": 9,
+					"operand": null
+				},
+				{
+					"expectedUnit": "undefined",
+					"instructionCode": 2,
+					"operand": {
+						"calcultionValueUnit": "undefined",
+						"value": "weightAu"
+					}
+				},
+				{
+					"expectedUnit": "undefined",
+					"instructionCode": 1,
+					"operand": {
+						"calcultionValueUnit": "undefined",
+						"value": "volume"
+					}
+				},
+				{
+					"expectedUnit": "undefined",
+					"instructionCode": 1,
+					"operand": {
+						"calcultionValueUnit": "undefined",
+						"value": "specDensityU"
+					}
+				},
+				{
+					"expectedUnit": "undefined",
+					"instructionCode": 9,
+					"operand": null
+				},
+				{
+					"expectedUnit": "undefined",
+					"instructionCode": 2,
+					"operand": {
+						"calcultionValueUnit": "undefined",
+						"value": "weightU"
+					}
+				}
+			],
+			"valueStack": null,
+			"identifier": "weight",
+			"unit": null,
+			"success": false,
+			"producedOutputvalue": "none",
+			"documentedFormula": "none",
+			"descriptionLongtext": "none"
+		},
+		"Hmeasure_DS": {
+			"instructionStack": [
+				{
+					"expectedUnit": "undefined",
+					"instructionCode": 1,
+					"operand": {
+						"calcultionValueUnit": "undefined",
+						"value": "zmeasure_DS"
+					}
+				},
+				{
+					"expectedUnit": "undefined",
+					"instructionCode": 1,
+					"operand": {
+						"calcultionValueUnit": "undefined",
+						"value": "p_DS"
+					}
+				},
+				{
+					"expectedUnit": "undefined",
+					"instructionCode": 1,
+					"operand": {
+						"calcultionValueUnit": "undefined",
+						"value": "rho_DS"
+					}
+				},
+				{
+					"expectedUnit": "undefined",
+					"instructionCode": 1,
+					"operand": {
+						"calcultionValueUnit": "undefined",
+						"value": "g"
+					}
+				},
+				{
+					"expectedUnit": "undefined",
+					"instructionCode": 9,
+					"operand": null
+				},
+				{
+					"expectedUnit": "undefined",
+					"instructionCode": 10,
+					"operand": null
+				},
+				{
+					"expectedUnit": "undefined",
+					"instructionCode": 1,
+					"operand": {
+						"calcultionValueUnit": "undefined",
+						"value": "u_DS"
+					}
+				},
+				{
+					"expectedUnit": "undefined",
+					"instructionCode": 3,
+					"operand": {
+						"calcultionValueUnit": "undefined",
+						"value": 2.0
+					}
+				},
+				{
+					"expectedUnit": "undefined",
+					"instructionCode": 11,
+					"operand": null
+				},
+				{
+					"expectedUnit": "undefined",
+					"instructionCode": 3,
+					"operand": {
+						"calcultionValueUnit": "undefined",
+						"value": 2.0
+					}
+				},
+				{
+					"expectedUnit": "undefined",
+					"instructionCode": 1,
+					"operand": {
+						"calcultionValueUnit": "undefined",
+						"value": "g"
+					}
+				},
+				{
+					"expectedUnit": "undefined",
+					"instructionCode": 9,
+					"operand": null
+				},
+				{
+					"expectedUnit": "undefined",
+					"instructionCode": 10,
+					"operand": null
+				},
+				{
+					"expectedUnit": "undefined",
+					"instructionCode": 7,
+					"operand": null
+				},
+				{
+					"expectedUnit": "undefined",
+					"instructionCode": 7,
+					"operand": null
+				},
+				{
+					"expectedUnit": "undefined",
+					"instructionCode": 2,
+					"operand": {
+						"calcultionValueUnit": "undefined",
+						"value": "Hmeasure_DS"
+					}
+				}
+			],
+			"valueStack": [
+			],
+			"identifier": "Hmeasure_DS",
+			"unit": null,
+			"success": true,
+			"producedOutputvalue": "none",
+			"documentedFormula": "none",
+			"descriptionLongtext": "none"
+		},
+		"Hloss_DS": {
+			"instructionStack": [
+				{
+					"expectedUnit": "undefined",
+					"instructionCode": 1,
+					"operand": {
+						"calcultionValueUnit": "undefined",
+						"value": "zeta_DS"
+					}
+				},
+				{
+					"expectedUnit": "undefined",
+					"instructionCode": 1,
+					"operand": {
+						"calcultionValueUnit": "undefined",
+						"value": "uloss_DS"
+					}
+				},
+				{
+					"expectedUnit": "undefined",
+					"instructionCode": 3,
+					"operand": {
+						"calcultionValueUnit": "undefined",
+						"value": 2.0
+					}
+				},
+				{
+					"expectedUnit": "undefined",
+					"instructionCode": 11,
+					"operand": null
+				},
+				{
+					"expectedUnit": "undefined",
+					"instructionCode": 9,
+					"operand": null
+				},
+				{
+					"expectedUnit": "undefined",
+					"instructionCode": 3,
+					"operand": {
+						"calcultionValueUnit": "undefined",
+						"value": 2.0
+					}
+				},
+				{
+					"expectedUnit": "undefined",
+					"instructionCode": 1,
+					"operand": {
+						"calcultionValueUnit": "undefined",
+						"value": "g"
+					}
+				},
+				{
+					"expectedUnit": "undefined",
+					"instructionCode": 9,
+					"operand": null
+				},
+				{
+					"expectedUnit": "undefined",
+					"instructionCode": 10,
+					"operand": null
+				},
+				{
+					"expectedUnit": "undefined",
+					"instructionCode": 2,
+					"operand": {
+						"calcultionValueUnit": "undefined",
+						"value": "Hloss_DS"
+					}
+				}
+			],
+			"valueStack": [
+			],
+			"identifier": "Hloss_DS",
+			"unit": null,
+			"success": true,
+			"producedOutputvalue": "none",
+			"documentedFormula": "none",
+			"descriptionLongtext": "none"
+		},
+		"u_DS": {
+			"instructionStack": [
+				{
+					"expectedUnit": "undefined",
+					"instructionCode": 1,
+					"operand": {
+						"calcultionValueUnit": "undefined",
+						"value": "Q_DS"
+					}
+				},
+				{
+					"expectedUnit": "undefined",
+					"instructionCode": 3,
+					"operand": {
+						"calcultionValueUnit": "undefined",
+						"value": 4.0
+					}
+				},
+				{
+					"expectedUnit": "undefined",
+					"instructionCode": 9,
+					"operand": null
+				},
+				{
+					"expectedUnit": "undefined",
+					"instructionCode": 1,
+					"operand": {
+						"calcultionValueUnit": "undefined",
+						"value": "D_DS"
+					}
+				},
+				{
+					"expectedUnit": "undefined",
+					"instructionCode": 3,
+					"operand": {
+						"calcultionValueUnit": "undefined",
+						"value": 2.0
+					}
+				},
+				{
+					"expectedUnit": "undefined",
+					"instructionCode": 11,
+					"operand": null
+				},
+				{
+					"expectedUnit": "undefined",
+					"instructionCode": 1,
+					"operand": {
+						"calcultionValueUnit": "undefined",
+						"value": "PI"
+					}
+				},
+				{
+					"expectedUnit": "undefined",
+					"instructionCode": 9,
+					"operand": null
+				},
+				{
+					"expectedUnit": "undefined",
+					"instructionCode": 10,
+					"operand": null
+				},
+				{
+					"expectedUnit": "undefined",
+					"instructionCode": 2,
+					"operand": {
+						"calcultionValueUnit": "undefined",
+						"value": "u_DS"
+					}
+				}
+			],
+			"valueStack": [
+			],
+			"identifier": "u_DS",
+			"unit": null,
+			"success": true,
+			"producedOutputvalue": "none",
+			"documentedFormula": "none",
+			"descriptionLongtext": "none"
+		},
+		"volume": {
+			"instructionStack": [
+				{
+					"expectedUnit": "undefined",
+					"instructionCode": 1,
+					"operand": {
+						"calcultionValueUnit": "undefined",
+						"value": "surface"
+					}
+				},
+				{
+					"expectedUnit": "undefined",
+					"instructionCode": 1,
+					"operand": {
+						"calcultionValueUnit": "undefined",
+						"value": "height"
+					}
+				},
+				{
+					"expectedUnit": "undefined",
+					"instructionCode": 9,
+					"operand": null
+				},
+				{
+					"expectedUnit": "undefined",
+					"instructionCode": 2,
+					"operand": {
+						"calcultionValueUnit": "undefined",
+						"value": "volume"
+					}
+				}
+			],
+			"valueStack": null,
+			"identifier": "volume",
+			"unit": null,
+			"success": false,
+			"producedOutputvalue": "none",
+			"documentedFormula": "none",
+			"descriptionLongtext": "none"
+		},
+		"eta": {
+			"instructionStack": [
+				{
+					"expectedUnit": "undefined",
+					"instructionCode": 1,
+					"operand": {
+						"calcultionValueUnit": "undefined",
+						"value": "Phyd"
+					}
+				},
+				{
+					"expectedUnit": "undefined",
+					"instructionCode": 1,
+					"operand": {
+						"calcultionValueUnit": "undefined",
+						"value": "Pshaft"
+					}
+				},
+				{
+					"expectedUnit": "undefined",
+					"instructionCode": 10,
+					"operand": null
+				},
+				{
+					"expectedUnit": "undefined",
+					"instructionCode": 2,
+					"operand": {
+						"calcultionValueUnit": "undefined",
+						"value": "eta"
+					}
+				}
+			],
+			"valueStack": [
+			],
+			"identifier": "eta",
+			"unit": null,
+			"success": true,
+			"producedOutputvalue": "none",
+			"documentedFormula": "none",
+			"descriptionLongtext": "none"
+		},
+		"NPSH": {
+			"instructionStack": [
+				{
+					"expectedUnit": "undefined",
+					"instructionCode": 1,
+					"operand": {
+						"calcultionValueUnit": "undefined",
+						"value": "Hmeasure_SS"
+					}
+				},
+				{
+					"expectedUnit": "undefined",
+					"instructionCode": 1,
+					"operand": {
+						"calcultionValueUnit": "undefined",
+						"value": "Hloss_SS"
+					}
+				},
+				{
+					"expectedUnit": "undefined",
+					"instructionCode": 1,
+					"operand": {
+						"calcultionValueUnit": "undefined",
+						"value": "zimpeller"
+					}
+				},
+				{
+					"expectedUnit": "undefined",
+					"instructionCode": 7,
+					"operand": null
+				},
+				{
+					"expectedUnit": "undefined",
+					"instructionCode": 8,
+					"operand": null
+				},
+				{
+					"expectedUnit": "undefined",
+					"instructionCode": 1,
+					"operand": {
+						"calcultionValueUnit": "undefined",
+						"value": "psteam"
+					}
+				},
+				{
+					"expectedUnit": "undefined",
+					"instructionCode": 1,
+					"operand": {
+						"calcultionValueUnit": "undefined",
+						"value": "rho_SS"
+					}
+				},
+				{
+					"expectedUnit": "undefined",
+					"instructionCode": 1,
+					"operand": {
+						"calcultionValueUnit": "undefined",
+						"value": "g"
+					}
+				},
+				{
+					"expectedUnit": "undefined",
+					"instructionCode": 9,
+					"operand": null
+				},
+				{
+					"expectedUnit": "undefined",
+					"instructionCode": 10,
+					"operand": null
+				},
+				{
+					"expectedUnit": "undefined",
+					"instructionCode": 8,
+					"operand": null
+				},
+				{
+					"expectedUnit": "undefined",
+					"instructionCode": 2,
+					"operand": {
+						"calcultionValueUnit": "undefined",
+						"value": "NPSH"
+					}
+				}
+			],
+			"valueStack": [
+			],
+			"identifier": "NPSH",
+			"unit": null,
+			"success": true,
+			"producedOutputvalue": "none",
+			"documentedFormula": "none",
+			"descriptionLongtext": "none"
+		},
+		"Pshaft_el": {
+			"instructionStack": [
+				{
+					"expectedUnit": "undefined",
+					"instructionCode": 1,
+					"operand": {
+						"calcultionValueUnit": "undefined",
+						"value": "etamot"
+					}
+				},
+				{
+					"expectedUnit": "undefined",
+					"instructionCode": 1,
+					"operand": {
+						"calcultionValueUnit": "undefined",
+						"value": "Pmotor"
+					}
+				},
+				{
+					"expectedUnit": "undefined",
+					"instructionCode": 9,
+					"operand": null
+				},
+				{
+					"expectedUnit": "undefined",
+					"instructionCode": 2,
+					"operand": {
+						"calcultionValueUnit": "undefined",
+						"value": "Pshaft_el"
+					}
+				}
+			],
+			"valueStack": [
+			],
+			"identifier": "Pshaft_el",
+			"unit": null,
+			"success": true,
+			"producedOutputvalue": "none",
+			"documentedFormula": "none",
+			"descriptionLongtext": "none"
+		},
+		"Hmeasure_SS": {
+			"instructionStack": [
+				{
+					"expectedUnit": "undefined",
+					"instructionCode": 1,
+					"operand": {
+						"calcultionValueUnit": "undefined",
+						"value": "zmeasure_SS"
+					}
+				},
+				{
+					"expectedUnit": "undefined",
+					"instructionCode": 1,
+					"operand": {
+						"calcultionValueUnit": "undefined",
+						"value": "p_SS"
+					}
+				},
+				{
+					"expectedUnit": "undefined",
+					"instructionCode": 1,
+					"operand": {
+						"calcultionValueUnit": "undefined",
+						"value": "rho_SS"
+					}
+				},
+				{
+					"expectedUnit": "undefined",
+					"instructionCode": 1,
+					"operand": {
+						"calcultionValueUnit": "undefined",
+						"value": "g"
+					}
+				},
+				{
+					"expectedUnit": "undefined",
+					"instructionCode": 9,
+					"operand": null
+				},
+				{
+					"expectedUnit": "undefined",
+					"instructionCode": 10,
+					"operand": null
+				},
+				{
+					"expectedUnit": "undefined",
+					"instructionCode": 1,
+					"operand": {
+						"calcultionValueUnit": "undefined",
+						"value": "u_SS"
+					}
+				},
+				{
+					"expectedUnit": "undefined",
+					"instructionCode": 3,
+					"operand": {
+						"calcultionValueUnit": "undefined",
+						"value": 2.0
+					}
+				},
+				{
+					"expectedUnit": "undefined",
+					"instructionCode": 11,
+					"operand": null
+				},
+				{
+					"expectedUnit": "undefined",
+					"instructionCode": 3,
+					"operand": {
+						"calcultionValueUnit": "undefined",
+						"value": 2.0
+					}
+				},
+				{
+					"expectedUnit": "undefined",
+					"instructionCode": 1,
+					"operand": {
+						"calcultionValueUnit": "undefined",
+						"value": "g"
+					}
+				},
+				{
+					"expectedUnit": "undefined",
+					"instructionCode": 9,
+					"operand": null
+				},
+				{
+					"expectedUnit": "undefined",
+					"instructionCode": 10,
+					"operand": null
+				},
+				{
+					"expectedUnit": "undefined",
+					"instructionCode": 7,
+					"operand": null
+				},
+				{
+					"expectedUnit": "undefined",
+					"instructionCode": 7,
+					"operand": null
+				},
+				{
+					"expectedUnit": "undefined",
+					"instructionCode": 2,
+					"operand": {
+						"calcultionValueUnit": "undefined",
+						"value": "Hmeasure_SS"
+					}
+				}
+			],
+			"valueStack": [
+			],
+			"identifier": "Hmeasure_SS",
+			"unit": null,
+			"success": true,
+			"producedOutputvalue": "none",
+			"documentedFormula": "none",
+			"descriptionLongtext": "none"
+		},
+		"u_SS": {
+			"instructionStack": [
+				{
+					"expectedUnit": "undefined",
+					"instructionCode": 1,
+					"operand": {
+						"calcultionValueUnit": "undefined",
+						"value": "Q_SS"
+					}
+				},
+				{
+					"expectedUnit": "undefined",
+					"instructionCode": 3,
+					"operand": {
+						"calcultionValueUnit": "undefined",
+						"value": 4.0
+					}
+				},
+				{
+					"expectedUnit": "undefined",
+					"instructionCode": 9,
+					"operand": null
+				},
+				{
+					"expectedUnit": "undefined",
+					"instructionCode": 1,
+					"operand": {
+						"calcultionValueUnit": "undefined",
+						"value": "D_SS"
+					}
+				},
+				{
+					"expectedUnit": "undefined",
+					"instructionCode": 3,
+					"operand": {
+						"calcultionValueUnit": "undefined",
+						"value": 2.0
+					}
+				},
+				{
+					"expectedUnit": "undefined",
+					"instructionCode": 11,
+					"operand": null
+				},
+				{
+					"expectedUnit": "undefined",
+					"instructionCode": 1,
+					"operand": {
+						"calcultionValueUnit": "undefined",
+						"value": "PI"
+					}
+				},
+				{
+					"expectedUnit": "undefined",
+					"instructionCode": 9,
+					"operand": null
+				},
+				{
+					"expectedUnit": "undefined",
+					"instructionCode": 10,
+					"operand": null
+				},
+				{
+					"expectedUnit": "undefined",
+					"instructionCode": 2,
+					"operand": {
+						"calcultionValueUnit": "undefined",
+						"value": "u_SS"
+					}
+				}
+			],
+			"valueStack": [
+			],
+			"identifier": "u_SS",
+			"unit": null,
+			"success": true,
+			"producedOutputvalue": "none",
+			"documentedFormula": "none",
+			"descriptionLongtext": "none"
+		},
+		"Hloss_SS": {
+			"instructionStack": [
+				{
+					"expectedUnit": "undefined",
+					"instructionCode": 1,
+					"operand": {
+						"calcultionValueUnit": "undefined",
+						"value": "zeta_SS"
+					}
+				},
+				{
+					"expectedUnit": "undefined",
+					"instructionCode": 1,
+					"operand": {
+						"calcultionValueUnit": "undefined",
+						"value": "uloss_SS"
+					}
+				},
+				{
+					"expectedUnit": "undefined",
+					"instructionCode": 3,
+					"operand": {
+						"calcultionValueUnit": "undefined",
+						"value": 2.0
+					}
+				},
+				{
+					"expectedUnit": "undefined",
+					"instructionCode": 11,
+					"operand": null
+				},
+				{
+					"expectedUnit": "undefined",
+					"instructionCode": 9,
+					"operand": null
+				},
+				{
+					"expectedUnit": "undefined",
+					"instructionCode": 3,
+					"operand": {
+						"calcultionValueUnit": "undefined",
+						"value": 2.0
+					}
+				},
+				{
+					"expectedUnit": "undefined",
+					"instructionCode": 1,
+					"operand": {
+						"calcultionValueUnit": "undefined",
+						"value": "g"
+					}
+				},
+				{
+					"expectedUnit": "undefined",
+					"instructionCode": 9,
+					"operand": null
+				},
+				{
+					"expectedUnit": "undefined",
+					"instructionCode": 10,
+					"operand": null
+				},
+				{
+					"expectedUnit": "undefined",
+					"instructionCode": 2,
+					"operand": {
+						"calcultionValueUnit": "undefined",
+						"value": "Hloss_SS"
+					}
+				}
+			],
+			"valueStack": [
+			],
+			"identifier": "Hloss_SS",
+			"unit": null,
+			"success": true,
+			"producedOutputvalue": "none",
+			"documentedFormula": "none",
+			"descriptionLongtext": "none"
+		}
+	},
+	"coeficientstore": {
+	},
+	"newValues": [
+		"Pshaft_mech"
+	],
+	"numberOfPlaces": 3,
+	"identifier": "pumptestlib",
+	"baseDelay": 3,
+	"increaseDelay": 5,
+	"baseRuns": 10,
+	"increaseRuns": 20,
+	"tracefile": "./src/test/resources/trace/trace.htm",
+	"debugmode": true
+}

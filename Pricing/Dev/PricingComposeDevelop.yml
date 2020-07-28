@@ -1,0 +1,75 @@
+version: '3.4'
+
+services:
+  variantcacheservice:
+    image: digitalunit4ksb/variantcacheservice:develop
+    environment:
+      - REDISPORT=6379
+      - LIVETIME_EUREKA=8760  #hours #One year
+      - LIVETIME_KSBASE=168    #hours      
+    ports:
+      - "55716:80"
+    links:
+      - redis
+    restart: unless-stopped
+  pricingservice:
+    image: digitalunit4ksb/pricingservice:develop
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ASPNETCORE_URLS=http://+:80
+      - CAMOSWORKERCOUNT=5
+      - PRICERESOLVERWORKERCOUNT=20
+      - CACHEFILLINGWORKERCOUNT=20
+      - CAMOSURL=http://vnbase1c.emea.ksb.intern:23602
+      - Server=vdmbase_c
+      - Database=MBASEP_C
+      - DatabaseUser=SVC-CUUR
+      - DatabasePassword=@WSX2wsx
+      - PricingResolverUrl=http://pricingresolver
+      - VariantCacheServiceUrl=http://variantcacheservice
+    volumes:
+    - ./config/pricingservice:/app/config 
+    ports:
+      - "55717:80"
+    links:
+      - variantcacheservice
+    restart: unless-stopped
+    
+  redis:
+    container_name: redis
+    image: redis:5
+    command: redis-server --appendonly yes
+    ports: 
+      - 6379
+    volumes: 
+      - redis:/data
+    restart: unless-stopped
+    
+  pricingresolver:
+    image: digitalunit4ksb/pricingresolver:develop
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - HYBRISPRICINGTOKENURL=https://sap-central-qual.intern.ksb.com/ksb/esi001/pricingservice/?$metadata
+      - HYBRISPRICINGSETURL=https://sap-central-qual.intern.ksb.com/ksb/esi001/pricingservice/PricingSet
+      - PRICINGUSER=SVC-CUBJ
+      - PRICINGPASSWORD=K9ZOZhhcw1zTgU5zns8PuIqWw3kjEMzqBSidZbiSk8Q=
+    ports:
+      - "55719:80"
+    restart: unless-stopped
+
+  pricingwarmup:
+    image: digitalunit4ksb/pricingwarmup:develop
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development  #swagger only in debug
+      - Server=vdmbase_c
+      - Database=MBASEP_C
+      - DatabaseUser=SVC-CUUR
+      - DatabasePassword=@WSX2wsx
+    ports:
+      - "55718:80"    
+    restart: unless-stopped
+
+networks:
+  default:
+volumes:
+  redis:

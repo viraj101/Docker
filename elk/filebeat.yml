@@ -1,0 +1,43 @@
+filebeat.autodiscover:
+  providers:
+    - type: docker
+      templates:
+        - condition:
+            contains:
+              docker.container.image: digitalunit4ksb/ksb_pumptest2_
+          config:
+            - type: container
+              paths:
+                - /usr/share/dockerlogs/data/${data.docker.container.id}/*.log
+              exclude_lines: ["^\\s+[\\-`('.|_]"]  # drop asciiart lines
+filebeat.config:
+  modules:
+    path: ${path.config}/modules.d/*.yml
+    reload.enabled: false
+
+processors:
+- add_docker_metadata:
+    host: "unix:///var/run/docker.sock"
+
+- decode_json_fields:
+    fields: ["log", "message"]
+    target: ""
+    overwrite_keys: true
+
+output.elasticsearch:
+  hosts: ["vndckr1c:9200"]
+  #indices:
+  #  - index: "%{[@metadata][beat]}-%{+yyyy-MM-dd HH:mm:ss:SSSZ}"
+  #  - index: "filebeat-%{[agent.version]}-%{+yyyy.MM.dd}"
+setup.kibana:
+  host: "vndckr1c:5601"
+  protocol: "http"
+
+logging.json: true
+logging.metrics.enabled: false
+logging.level: debug
+logging.to_files: true
+logging.files:
+  path: /var/log/filebeat
+  keepfiles: 7
+  permissions: 0644

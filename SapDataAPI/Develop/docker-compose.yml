@@ -1,0 +1,16 @@
+version: '3.2'
+
+services:
+  sapdataapi:
+    image: digitalunit4ksb/sapdataapi:develop
+    container_name: sapdataapi_develop
+    environment:
+      - "SPRING_PROFILES_ACTIVE=dev"
+    ports:
+      - 7290:7290
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "10m"
+        max-file: "3"
+    restart: always

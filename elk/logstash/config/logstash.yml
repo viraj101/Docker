@@ -1,0 +1,9 @@
+http.host: "vndckr1c"
+xpack.monitoring.elasticsearch.hosts: [ "http://vndckr1c:9200" ]
+
+## X-Pack security credentials
+#
+xpack.monitoring.enabled: true
+xpack.monitoring.elasticsearch.username: elastic
+xpack.monitoring.elasticsearch.password: changeme
+

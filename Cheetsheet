@@ -1,0 +1,526 @@
+port conflict 
+netstat -lntu
+
+ssh -L 8884:localhost:8884 boddpru@vndckr1c
+
+1)convert pem to crt use below command
+openssl x509 -in cert.crt -out cert.pem
+
+2)fix trusted ssl 
+certutil -addstore -user "ROOT" .pem
+
+
+docker logs 0d60f8de7926 >> log.txt
+docker logs 0d60f8de7926 > test.log 2>&1
+
+top memory used files 
+du -a /home | sort -n -r | head -n 5
+
+cat /etc/redhat-release
+
+
+useradd boddpru
+passwd abcd
+
+open visudo add below content  
+
+herbtho2         ALL=(ALL)       ALL
+naiksaw         ALL=(ALL)       ALL
+mishgau         ALL=(ALL)       ALL
+boddpru         ALL=(ALL)       ALL
+
+adding packages other then yum
+eds-linux-patch -asic git
+
+
+sudo eds-linux-patch -asic -p git
+
+sudo eds-linux-patch -asic -U -p git
+
+lsof
+
+vi etc/postgresql/12/main/pg_hba.conf
+
+check configuration 
+lshw -short -C memory
+check os version
+lsb_release -a
+lshw | more
+
+India_1ksb
+-r--r-----.  1 root root   1142 Mar 24 01:35 sudoers
+
+apt-get update -y
+sudo apt install default-jdk
+sudo apt install default-jre
+java --version
+apt install maven
+
+find out command used by other users
+sudo vim /home/USER_YOU_WANT_TO_VIEW/.bash_history
+sudo vim /home/boddpru/.bash_history
+
+find file
+find . -name "*kafka-console-producer"
+
+/var/log$ du -sh *	
+
+start putty -ssh boddpru@vndckr1c -i keyfile path -m shellfile.sh
+
+To run the application in background
+java -jar artifact &
+
+useradd name (to create user)
+passwd name
+change password
+europe@123
+userdel -f username (to del user)
+
+change user password
+first sign on or "su" to the "root" account. Then type, ``passwd user'
+to check user access
+sudo -l 
+sudo -l userame
+
+docker logs -f --tail 10 id   89 port
+
+Docker Commands
+
+docker system df 
+docker system df -v
+docker system prune -a --volumes
+sudo docker volume ls -qf dangling=true
+docker system prune --volumes -f
+htop 
+docker stats  (check cpu load of applications)
+sudo truncate -s 0 syslog
+
+sudo chown -R $USER(user):$USER(group) docker/
+sudo chown -R $USER:$USER docker/
+
+docker top id
+docker logs -f id | grep ERROR
+
+docker tag 98c6062f4714 prudvirajboddula/dockerprudvi123:v.0.0.11
+docker push prudvirajboddula/dockerprudvi123:v.0.0.11
+
+docker tag 9c2ad8dbbb6e digitalunit4ksb/eureka:hydraui.0.1
+docker tag 0c2ea2b51545 digitalunit4ksb/eureka:searcherservice.latest
+docker build -t digitalunit4ksb/eureka:searcherservice.0.2 .
+docker build -t digitalunit4ksb/eureka:hydraui.0.1 .
+stablenginx                                          0.1                          9c2ad8dbbb6e
+docker pull digitalunit4ksb/eureka:latest
+docker push digitalunit4ksb/eureka:searcherservice.0.3
+docker push digitalunit4ksb/birtscheduler:develop.0.1
+docker push digitalunit4ksb/birtscheduler:develop.0.2
+docker push confluentinc/cp-server:5.4.1 
+
+docker tag confluentinc/cp-server:5.4.1 digitalunit4ksb/birtscheduler:develop:00.0.0.1
+
+docker build -t test -f ./docker-hello-world/test.yaml .
+
+systemctl status docker
+service docker status
+
+scale up application
+sudo docker-compose -f test.yaml up -d --scale redis=1
+
+docker-compose up -d --scale birtscheduler=4
+
+docker-compose ps
+
+windows- docker-compose -f test.yaml scale redis=3
+docker-compose -f docker-compose.yaml scale birtscheduler=5
+
+docker pull imagename (Pulling an Image)
+docker build -t applicationtagname location
+docker build -t tagname . (To build docker image)
+sudo docker build -t okerfgtrfrv -f dfilr.yaml .
+docker exec -it container_name /bin/bash (To move into container)
+docker exec -it container_name sh
+docker run -d -p 1234:8080 imagename (To run a image To container)
+docker run -d -p 1234(host_port):8080(container_port) -v (host_path:container_path) image_name (Value mount To the container)
+docker run -d -p 1234(host_port):8080(container_port) -v ( D:\data\BODDPRU\My Documents\Dockerfiles/sample.war:/usr/local/tomcat/webapps) --name n_ew_container_name (image_name or ID)
+
+
+#To make links b/w containers it happens only while run time
+docker run -d -p 1234(host_port):8080(container_port) --link cexisting_container1:existing_container1 not_running_image_ID
+docker run -d -p 1234(host_port):8080(container_port) --link container1:container1 image_ID
+
+#To run docker compose go To docker-compose.yaml file location and run below command
+docker-compose up -d 
+docker-compose up --build -d .
+sudo docker-compose -f Eureka.yml up -d
+docker-compose -f PricingComposeDevelop.yml up -d   (start docker.compose.yam file )
+docker-compose down (To shutdown)
+docker-compose -f Eureka.yaml up -d
+
+#Connecting to an Existing Container
+docker container attach nginx
+docker rm -f container_ID (To remove one container)
+docker rm -f $(docker ps -aq)
+docker rmi -f $(docker images)
+docker network prune
+
+#Containers Events
+docker system events infinite
+
+#Public Ports
+docker container port infinite
+
+#Running Processes
+docker container top infinite
+
+#Container Resource Usage
+docker container stats infinite
+docker rmi - image_name (To remove images)
+docker rmi -f $(docker images -aq)
+
+#Removing all Exited Containers
+docker container rm $(docker container ls -a -f status=exited -q
+docker ps -a (shows container with sToped,start,pause state )
+docker ps
+
+#Removing Dangling Images
+docker image rm $(docker image ls -f dangling=true -q)
+
+
+#Removing Dangling Volumes
+docker volume rm $(docker volume ls -f dangling=true -q)
+
+##To check container logs
+docker logs container_ID
+
+#To get details information of container
+docker inspect container_id  172.17.0.6
+
+#Tagging an Image
+docker image tag nginx eon01/nginx
+
+#Showing the History of an Image
+docker image history
+
+#Running Containers
+docker container ls
+docker container ls -a
+
+export environment variables
+export prudviraj=$PWD/test
+[boddpru@derlksb0145 Pumptest2.0]$ docker run -d -p 6379 -v "${prudviraj}":/tmp redis:5
+env | grep prudviraj
+To remove 
+unset prudviraj
+
+#GIT commands
+
+D:\data\BODDPRU\My Documents\DUS-210\pumptest\KSB_PumpTest2_DevOps>git branch -a
+  develop
+* master
+  remotes/origin/HEAD -> origin/develop
+  remotes/origin/develop
+  remotes/origin/master
+
+D:\data\BODDPRU\My Documents\DUS-210\pumptest\KSB_PumpTest2_DevOps>git checkout develop
+Switched to branch 'develop'
+Your branch is up to date with 'origin/develop'.
+
+D:\data\BODDPRU\My Documents\DUS-210\pumptest\KSB_PumpTest2_DevOps>git branch -a
+* develop
+  master
+  remotes/origin/HEAD -> origin/develop
+  remotes/origin/develop
+  remotes/origin/master
+
+git clone git@github.com:digitalunit4ksb/KSB_PumpTest2_DevOps.git 
+cd KSB_PumpTest2_DevOps.git
+git branch -a
+git checkout develop
+ls -lart
+git add .
+git commit -m ""
+git push
+
+for next time to push on same code just do
+git pull 
+git branch -a
+git checkout develop
+ls -lart
+git add .
+git commit -m "New environment variable added for datasource"
+git push
+
+git init
+git add .
+git commit -m "all microservice on vndckr1c"
+git remote add origin git@github.com:digitalunit4ksb/KSB_PumpTest2_DevOps.git
+git push -u origin develop
+push an existing repository from the command line
+git remote add origin https://github.com/boddpru/KSBTest.git
+git push -u origin master
+git branch -a
+	name (move to specific branch)
+git checkout -b branchname (create new branch)
+git branch -d branchname (delete branch)
+
+SUBVERSIONING
+apt-get install subversion
+svn ls https://github.com/digitalunit4ksb/KSB_DevOps/tree/master/Pumptest2.0
+svn ls https://github.com/digitalunit4ksb/KSB_DevOps/trunk/Pumptest2.0
+cat /root/.subversion/servers
+svn export https://github.com/digitalunit4ksb/KSB_DevOps/trunk/Pumptest2.0
+svn ls https://github.com/digitalunit4ksb/KSB_DevOps/trunk/Pumptest2.0
+svn export https://github.com/digitalunit4ksb/KSB_DevOps/trunk/Pumptest2.0
+
+
+
+git filter-master --tree-filter 'rm -f filename' HEAD
+
+COMMANDS TO COPY PARTICULAR FOLDER FROM GIT
+
+mkdir <repo>
+cd <repo>
+git init
+git remote add -f origin https://github.com/digitalunit4ksb/KSB_DevOps.git
+boddpru 
+363129e2b0e8c43f637e4f88f8df1abe00ea34f5
+git config core.sparseCheckout true
+echo "Pumptest2.0/" >> .git/info/sparse-checkout
+git pull origin develop
+Username for 'https://github.com': boddpru
+Password for 'https://boddpru@github.com': 363129e2b0e8c43f637e4f88f8df1abe00ea34f5
+From https://github.com/digitalunit4ksb/KSB_DevOps
+ * branch            develop    -> FETCH_HEAD
+ 
+ 
+ git stats
+ git diff (check files modification)
+ 
+ git log
+git reset HEAD~1 (numeric indicate commit want to delete)
+git status
+git diff
+git checkout (add commited file detials from status)
+check the log u will see 1 commit removed 
+
+git log 
+git rebase -i HEAD~1
+git status
+git rebase --continue
+
+scp boddpru@vndckr1c:/home/docker/Pumptest2.0/pumptestlib.1.json ./
+
+#untar command
+tar -c /folder -xf .tar
+
+#Openssl key generation
+openssl genrsa -out privateKey.pem 1024 (4096/1024/2048)
+openssl req -new -key privateKey.pem -out csr.pem
+openssl x509 -in csr.pem -out certificate.pem -req -signkey privateKey.pem -days 365
+
+#jenkins 
+java -jar jenkins.war http:8080
+
+CHANGE JAVA VERSION
+sudo update-alternatives --config javac
+
+CHECK BY TYPING javac
+
+#JAVA_ENV (setting) apt-get install default-jdk
+find /use/lib/jvm/java-1.8* |head -n 3 
+java-1.8.0-openjdk-1.8.0.181-3.b13.e17_5.x86_64
+output insert in vi .bash_profile
+export JAVA_HOME=/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.181-3.b13.e17_5.x86_64
+
+export JAVA_HOME=/usr/lib/jvm/java-11-openjdk-amd64
+export PATH=$PATH:$JAVA_HOME:$HOME/bin
+source ~/.bash_profile
+echo $JAVA_HOME
+output :- java-1.8.0-openjdk-1.8.0.181-3.b13.e17_5.x86_64
+
+
+SET PATH=C:\Program Files\Java\jdk-10.0.2\bin
+
+D:\data\BODDPRU\My Documents\Eureka\Eureka_Jar_File\Eureka_Jar_File>java -version
+java version "10.0.2" 2018-07-17
+Java(TM) SE Runtime Environment 18.3 (build 10.0.2+13)
+Java HotSpot(TM) 64-Bit Server VM 18.3 (build 10.0.2+13, mixed mode)
+
+
+Unix 
+sudo chage -I -1 -m 0 -M 99999 -E -1 username
+
+cat /etc/redhat-release (redhat version)
+
+
+
+
+example
+curl -H "Content-Type: application/json" --data @body.json http://localhost:8080/ui/webapp/conf
+
+
+curl -H "Content-Type: application/json" --data @order.json http://localhost:8085/createJob
+
+curl -H "Content-Type: application/json" --data @order.json http://test:8085/createJob
+
+
+
+order.json
+{"pluginDatasourcePath":"D:/data/12760-1-1.xml",
+"fixTextDatasourcePath":"D:/data/FixTextData-1.xml",
+"templateFilePath":"D:/data/TCHNCL_DATA_SHT.rptdesign",
+"visibilityDatasource":"D:/data/Visibility-A31B-TCHNCL_DATA_SHT",
+"position":"100",
+"outputFileName":"D:/data/reports/birt_test10.pdf",
+"outPutFormat":"pdf",
+"numberOfImages":"0",
+"startPageNumber":"7"}
+
+DATADOG CONFIGURTION:
+
+ DD_AGENT_MAJOR_VERSION=7 DD_API_KEY=dc44d9bba42a26a525b7b99cc84d4c87 DD_SITE="datadoghq.eu" bash -c "$(curl -L https://raw.githubusercontent.com/DataDog/datadog-agent/master/cmd/agent/install_script.sh)"
+ systemctl start datadog-agent
+ docker ps -a
+ vi /etc/datadog-agent/docker_daemon.yaml
+ service datadog-agent start
+ DOCKER_CONTENT_TRUST=1 docker run -d --name dd-agent -v /var/run/docker.sock:/var/run/docker.sock:ro -v /proc/:/host/proc/:ro -v /sys/fs/cgroup/:/host/sys/fs/cgroup:ro -e DD_API_KEY=dc44d9bba42a26a525b7b99cc84d4c87 -e DD_SITE="datadoghq.eu" datadog/agent:7
+ docker logs -f
+ docker ps
+ systemctl restart datadog-agent
+ cd /etc/datadog-agent/conf.d/docker.d
+  init_config:
+
+instances:
+    - url: "unix://var/run/docker.sock"
+      new_tag_names: true
+  
+ systemctl restart datadog-agent 
+ ]
+ 
+ Docker autostart (Boot strap):
+ 
+ [root@linux system]# systemctl enable docker
+Created symlink from /etc/systemd/system/multi-user.target.wants/docker.service to /usr/lib/systemd/system/docker.service.
+ ]
+ 
+ yum install net-tools     [On CentOS/RHEL]
+ apt install net-tools     [On Debian/Ubuntu]
+ zypper install net-tools  [On OpenSuse]
+ pacman -S netstat-nat     [On Arch Linux]
+ uninstall package in redhat
+ yum remove cifs-utils
+ 
+ MOUNTING WINDOWS SHARE IN Linux 
+ (mount -t cifs -o userame=boddpru,dir_mode=0755,file_mode=0755 //derlksb0145.EMEA.ksb.intern/D:/data/reports  /mnt )
+
+ 
+ sudo mount -t cifs -o credentials=/etc/win-credentials,uid=1000,gid=1000,dir_mode=0755,file_mode=0755 //WIN_SHARE_IP/<share_name> /mnt/win_share
+ sudo mount -t cifs -o user=boddpru,uid=1000,gid=1000,dir_mode=0755,file_mode=0755 //10.214.5.153/D:/data/camos /mnt/win_share
+ sudo mount -t cifs //WIN IP/D:/data/reports /home/linux/mnt -o user=boddpru
+ 
+  mount -t cifs -o userame=boddpru,password=1234_Ksbtech, //10.9.53.178/D:/data/reports /mnt
+ 
+[admincust@derlksb0145 opt]$ sudo mount -t cifs -o user=boddpru,gid=1000 //10.214.5.153/D:/data/camos /opt/test
+Password for boddpru@//10.214.5.153/D:/data/camos:  ************
+mount error(13): Permission denied
+Refer to the mount.cifs(8) manual page (e.g. man mount.cifs)
+
+mount -t cifs -o userame=admincust,dir_mode=0755,file_mode=0755 //derlksb0091.EMEA.ksb.intern/D:/camos/ksb /mnt/win_share
+
+mount -t cifs //derlksb0091.EMEA.ksb.intern/camos/ksb /mnt/win_share -o user=svc-camos,domain=emea,vers=3.0,sec=ntlmsspi
+working:- user=svc-camos password:camos@ksb
+
+
+
+mount -t cifs //derlksb0091.EMEA.ksb.intern/camos/ksb /mnt/win_share -o user=svc-camos,domain=emea,vers=3.0,sec=ntlmsspi
+
+
+mount -t cifs //derlksb0091.EMEA.ksb.intern/camos/ksb /mnt/camos/ksb -o user=svc-camos,domain=emea,vers=3.0,sec=ntlmsspi
+
+
+mount -t cifs //derlksb0151.emea.ksb.intern/KSBase /mnt/vnbasedcq/KSBase -o user=svc-camos,domain=emea,vers=3.0,sec=ntlmsspi
+unmount /mnt/vnbasedcq/KSBase
+
+mount -t cifs //derlksb0152.emea.ksb.intern/KSBase /mnt/vnbasedcp/KSBase -o user=svc-camos,domain=emea,vers=3.0,sec=ntlmsspi
+
+/mnt/camos/ksb
+/mnt/vnbasedcq/KSBase
+
+# <file system>             <dir>          <type> <options>                                                   <dump>  <pass>
+//WIN_SHARE_IP/share_name  /mnt/win_share  cifs  credentials=/etc/win-credentials,file_mode=0755,dir_mode=0755 0       0
+
+mount -t cifs //derlksb0152.emea.ksb.intern/KSBase /mnt/vnbasedcp/KSBase -o user=svc-camos,domain=emea,vers=3.0,sec=ntlmsspi
+
+FILE TRANSFER :
+
+sftp username@hostname
+cd directory
+put -R directoryname (to copy whole directory)
+put file (to copy file)
+
+
+FROM 
+
+ARG DATA_ENRICHER
+ARG BOOTSTRAP_SERVER_CONFIG_IP
+ARG BOOTSTRAP_SERVER_CONFIG_PORT
+ARG MOCKPRODUCER_TOPIC_NAME
+ARG MEASUREMENTDATA_TOPIC_NAME
+
+ENV DATA_ENRICHER=$DATA_ENRICHER
+ENV BOOTSTRAP_SERVER_CONFIG_IP=$BOOTSTRAP_SERVER_CONFIG_IP
+ENV BOOTSTRAP_SERVER_CONFIG_PORT=$BOOTSTRAP_SERVER_CONFIG_PORT
+ENV MOCKPRODUCER_TOPIC_NAME=$MOCKPRODUCER_TOPIC_NAME
+ENV MEASUREMENTDATA_TOPIC_NAME=$MEASUREMENTDATA_TOPIC_NAME
+
+
+docker build --build-arg DATA_ENRICHER=ENRICH \
+--build-arg BOOTSTRAP_SERVER_CONFIG_IP=10.9.53.201 \
+--build-arg BOOTSTRAP_SERVER_CONFIG_PORT=9092 \
+--build-arg MOCKPRODUCER_TOPIC_NAME=RawData  \
+--build-arg MEASUREMENTDATA_TOPIC_NAME=MeasurementData -t enrich .
+
+docker build -e DATA_ENRICHER=ENRICH -e BOOTSTRAP_SERVER_CONFIG_IP=10.9.53.201 -e BOOTSTRAP_SERVER_CONFIG_PORT=9092 -e MOCKPRODUCER_TOPIC_NAME=RawData -e MEASUREMENTDATA_TOPIC_NAME=MeasurementData
+
+
+docker run -d  -e DATA_ENRICHER=ENRICH -e BOOTSTRAP_SERVER_CONFIG_IP=10.9.53.201 -e BOOTSTRAP_SERVER_CONFIG_PORT=9092 -e MOCKPRODUCER_TOPIC_NAME=RawData -e MEASUREMENTDATA_TOPIC_NAME=MeasurementData 72ae904fe833
+/ is for space
+
+docker exec -it enrich /bin/bash
+env
+
+
+pkexec visudo
+enter root password
+make changes
+save
+
+ctrl+X
+y
+enter
+
+
+  524  ll
+  525  vi /etc/postgresql/9.5/main/postgresql.conf
+  526  cd /etc/postgresql/9.5/main/
+  527  ll
+  528  cd
+  529  sudo systemctl stop postgresql
+  530  sudo systemctl status postgresql
+  531  cd /datadrive/postgress/
+  532  pwd
+  533  cd -
+  534  sudo rsync -av /var/lib/postgresql /datadrive/postgress
+  535  sudo mv /var/lib/postgresql/12/main /var/lib/postgresql/12/main.bak
+  536  sudo nano /etc/postgresql/12/main/postgresql.conf
+
+
+  480  ln -s /datadrive/docker/ /var/lib/docker
+  481  ll
+  482  ls /var/lib
+  483  ls -lart /var/lib
+  484  cd docker
+  485  cd /datadrive/docker/
+  486  ll
+  487  systemctl start docker
+
+

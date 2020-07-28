@@ -1,0 +1,1133 @@
+{
+  "projects": [
+    {
+      "id": 0,
+      "commissioningNumber": "1234",
+      "positionNumber": "5678",
+      "pumpId": "9abc",
+      "modifiedAt": "2019-07-16T19:20:30+01:00",
+      "testbedUid": "3c8aa78b-8757-4ed4-b3ba-d8fe0315fde1",
+      "guaranteeData": [
+        {
+          "acceptanceGrade": "ISO 9906/HI 1U",
+          "volumeRateOfFlow": "140",
+          "volumeRateOfFlowUnit": null,
+          "head": "48",
+          "headUnit": null,
+          "pumpPower": "39",
+          "pumpPowerUnit": null,
+          "driverPower": "24",
+          "driverPowerUnit": null,
+          "efficiency": "99",
+          "efficiencyUnit": null,
+          "speedOfRotation": "",
+          "speedOfRotationUnit": null,
+          "npshr": "41",
+          "npshrUnit": null,
+          "density": "",
+          "densityUnit": null,
+          "kinViscosity": "",
+          "kinViscosityUnit": null,
+          "operatingTemperature": "",
+          "operatingTemperatureUnit": null
+        }
+      ]
+    },
+    {
+      "id": 1,
+      "commissioningNumber": "111",
+      "positionNumber": "222",
+      "pumpId": "333",
+      "modifiedAt": "2019-09-16T19:20:30+01:00",
+      "testbedUid": "3c8aa78b-8757-4ed4-b3ba-d8fe0315fde1",
+      "guaranteeData": [
+        {
+          "acceptanceGrade": "ISO 9906/HI 2U",
+          "volumeRateOfFlow": "26",
+          "volumeRateOfFlowUnit": null,
+          "head": "95",
+          "headUnit": null,
+          "pumpPower": "45",
+          "pumpPowerUnit": null,
+          "driverPower": "88",
+          "driverPowerUnit": null,
+          "efficiency": "68",
+          "efficiencyUnit": null,
+          "speedOfRotation": "",
+          "speedOfRotationUnit": null,
+          "npshr": "250",
+          "npshrUnit": null,
+          "density": "",
+          "densityUnit": null,
+          "kinViscosity": "",
+          "kinViscosityUnit": null,
+          "operatingTemperature": "",
+          "operatingTemperatureUnit": null
+        },
+        {
+          "acceptanceGrade": "ISO 9906/HI 1E",
+          "volumeRateOfFlow": "120",
+          "volumeRateOfFlowUnit": null,
+          "head": "41",
+          "headUnit": null,
+          "pumpPower": "25",
+          "pumpPowerUnit": null,
+          "driverPower": "88",
+          "driverPowerUnit": null,
+          "efficiency": "",
+          "efficiencyUnit": null,
+          "speedOfRotation": "",
+          "speedOfRotationUnit": null,
+          "npshr": "",
+          "npshrUnit": null,
+          "density": "",
+          "densityUnit": null,
+          "kinViscosity": "",
+          "kinViscosityUnit": null,
+          "operatingTemperature": "",
+          "operatingTemperatureUnit": null
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "commissioningNumber": "1234",
+      "positionNumber": "5678",
+      "pumpId": "2U",
+      "modifiedAt": "2020-02-16T19:20:30+01:00",
+      "testbedUid": "3c8aa78b-8757-4ed4-b3ba-d8fe0315fde1",
+      "guaranteeData": [
+        {
+          "acceptanceGrade": "ISO 9906/HI 2U",
+          "volumeRateOfFlow": "140",
+          "volumeRateOfFlowUnit": "",
+          "head": "50",
+          "headUnit": "m",
+          "pumpPower": "25",
+          "pumpPowerUnit": "m3/s",
+          "driverPower": "61",
+          "driverPowerUnit": "",
+          "efficiency": "85",
+          "efficiencyUnit": null,
+          "speedOfRotation": "67",
+          "speedOfRotationUnit": null,
+          "npshr": "49",
+          "npshrUnit": null,
+          "density": "115",
+          "densityUnit": null,
+          "kinViscosity": "600",
+          "kinViscosityUnit": null,
+          "operatingTemperature": "150",
+          "operatingTemperatureUnit": null
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "commissioningNumber": "1234",
+      "positionNumber": "5678",
+      "pumpId": "1B",
+      "modifiedAt": "2014-09-19T19:20:30+01:00",
+      "testbedUid": "3c8aa78b-8757-4ed4-b3ba-d8fe0315fde1",
+      "guaranteeData": [
+        {
+          "acceptanceGrade": "ISO 9906/HI 1B",
+          "volumeRateOfFlow": "140",
+          "volumeRateOfFlowUnit": null,
+          "head": "48",
+          "headUnit": null,
+          "pumpPower": "39",
+          "pumpPowerUnit": null,
+          "driverPower": "24",
+          "driverPowerUnit": null,
+          "efficiency": "99",
+          "efficiencyUnit": null,
+          "speedOfRotation": "",
+          "speedOfRotationUnit": null,
+          "npshr": "41",
+          "npshrUnit": null,
+          "density": "",
+          "densityUnit": null,
+          "kinViscosity": "",
+          "kinViscosityUnit": null,
+          "operatingTemperature": "",
+          "operatingTemperatureUnit": null
+        }
+      ]
+    },
+    {
+      "commissioningNumber": "101",
+      "positionNumber": "102",
+      "pumpId": "103",
+      "modifiedAt": "2020-07-13T06:19:02.082Z",
+      "testbedUid": "3c8aa78b-8757-4ed4-b3ba-d8fe0315fde1",
+      "id": 5
+    },
+    {
+      "commissioningNumber": "115",
+      "positionNumber": "885",
+      "pumpId": "114",
+      "modifiedAt": "2020-07-13T06:27:35.274Z",
+      "testbedUid": "3c8aa78b-8757-4ed4-b3ba-d8fe0315fde1",
+      "id": 6
+    },
+    {
+      "commissioningNumber": "115",
+      "positionNumber": "885",
+      "pumpId": "114",
+      "modifiedAt": "2020-07-13T06:31:00.236Z",
+      "testbedUid": "3c8aa78b-8757-4ed4-b3ba-d8fe0315fde1",
+      "id": 7
+    },
+    {
+      "commissioningNumber": "115",
+      "positionNumber": "885",
+      "pumpId": "115",
+      "modifiedAt": "2020-07-13T06:42:30.055Z",
+      "testbedUid": "3c8aa78b-8757-4ed4-b3ba-d8fe0315fde1",
+      "id": 8
+    },
+    {
+      "commissioningNumber": "1155",
+      "positionNumber": "885",
+      "pumpId": "115",
+      "modifiedAt": "2020-07-14T10:40:24.670Z",
+      "testbedUid": "3c8aa78b-8757-4ed4-b3ba-d8fe0315fde1",
+      "id": 9
+    },
+    {
+      "commissioningNumber": "443",
+      "positionNumber": "775",
+      "pumpId": "334",
+      "modifiedAt": "2020-07-14T12:07:34.153Z",
+      "testbedUid": "3c8aa78b-8757-4ed4-b3ba-d8fe0315fde1",
+      "id": 10
+    },
+    {
+      "commissioningNumber": "676",
+      "positionNumber": "445",
+      "pumpId": "6622",
+      "modifiedAt": "2020-07-14T12:07:50.934Z",
+      "testbedUid": "3c8aa78b-8757-4ed4-b3ba-d8fe0315fde1",
+      "id": 11
+    },
+    {
+      "commissioningNumber": "112",
+      "positionNumber": "113",
+      "pumpId": "114",
+      "modifiedAt": "2020-07-14T14:58:28.550Z",
+      "testbedUid": "0083bfa2-40f0-49c6-92f1-fa6f8698d177",
+      "id": 12
+    },
+    {
+      "commissioningNumber": "118",
+      "positionNumber": "774",
+      "pumpId": "332",
+      "modifiedAt": "2020-07-15T11:41:51.305Z",
+      "id": 13
+    },
+    {
+      "commissioningNumber": "445",
+      "positionNumber": "118",
+      "pumpId": "774",
+      "modifiedAt": "2020-07-15T11:59:19.649Z",
+      "testbedUid": "0083bfa2-40f0-49c6-92f1-fa6f8698d177",
+      "id": 14
+    },
+    {
+      "commissioningNumber": "885",
+      "positionNumber": "441",
+      "pumpId": "887",
+      "modifiedAt": "2020-07-15T12:02:38.935Z",
+      "testbedUid": "0083bfa2-40f0-49c6-92f1-fa6f8698d177",
+      "id": 15
+    }
+  ],
+  "measurements": [
+    {
+      "id": 0,
+      "project_id": 0,
+      "name": "M44270",
+      "date": "05/14/2020",
+      "configuration": "C_12244",
+      "notes": "abcddc",
+      "snapshots": [
+        {
+          "name": "snapshot 2",
+          "normalisedDataArray": [
+            {
+              "sensorId": -1,
+              "symbolicName": "Head",
+              "displayText": null,
+              "value": 81.945,
+              "unit": "m"
+            },
+            {
+              "sensorId": 23,
+              "symbolicName": "Flow",
+              "displayText": null,
+              "value": 65.67036,
+              "unit": "m3/h"
+            },
+            {
+              "sensorId": 10,
+              "symbolicName": "speed",
+              "displayText": null,
+              "value": 39.417069,
+              "unit": "rpm"
+            },
+            {
+              "sensorId": 14,
+              "symbolicName": "temp",
+              "displayText": null,
+              "value": 18.592,
+              "unit": "degree"
+            }
+          ],
+          "sessionUid": "b1c0dd43-d457-4a47-9cb5-0488fb58b19b",
+          "snapshotUid": "2e70bc89-19e9-4606-a295-6ed82dc8eb64"
+        },
+        {
+          "name": "snapshot 1",
+          "normalisedDataArray": [
+            {
+              "sensorId": -1,
+              "symbolicName": "Head",
+              "displayText": null,
+              "value": 51.945,
+              "unit": "m"
+            },
+            {
+              "sensorId": 23,
+              "symbolicName": "Flow",
+              "displayText": null,
+              "value": 45.67036,
+              "unit": "m3/h"
+            },
+            {
+              "sensorId": 10,
+              "symbolicName": "speed",
+              "displayText": null,
+              "value": 29.417069,
+              "unit": "rpm"
+            },
+            {
+              "sensorId": 14,
+              "symbolicName": "temp",
+              "displayText": null,
+              "value": 28.592,
+              "unit": "degree"
+            }
+          ],
+          "sessionUid": "b1c0dd43-d457-4a47-9cb5-0488fb58b19b",
+          "snapshotUid": "2e70bc89-19e9-4606-a295-6ed82dc8eb64"
+        },
+        {
+          "name": "base",
+          "normalisedDataArray": [
+            {
+              "sensorId": -1,
+              "symbolicName": "Head",
+              "displayText": null,
+              "value": 0.94555327296257,
+              "unit": "m"
+            },
+            {
+              "sensorId": 23,
+              "symbolicName": "Flow",
+              "displayText": null,
+              "value": 0.67036885827952,
+              "unit": "m3/h"
+            },
+            {
+              "sensorId": 10,
+              "symbolicName": "speed",
+              "displayText": null,
+              "value": 0.41706901448452,
+              "unit": "rpm"
+            },
+            {
+              "sensorId": 14,
+              "symbolicName": "temp",
+              "displayText": null,
+              "value": 0.592303322919626,
+              "unit": "degree"
+            }
+          ],
+          "sessionUid": "b1c0dd43-d457-4a47-9cb5-0488fb58b19b",
+          "snapshotUid": "2e70bc89-19e9-4606-a295-6ed82dc8eb64"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "project_id": 0,
+      "name": "M44269",
+      "date": "05/14/2020",
+      "configuration": "C_18544",
+      "notes": "123",
+      "snapshots": [
+        {
+          "name": "snapshot 6",
+          "normalisedDataArray": [
+            {
+              "sensorId": -1,
+              "symbolicName": "Head",
+              "displayText": null,
+              "value": 32.945,
+              "unit": "m"
+            },
+            {
+              "sensorId": 23,
+              "symbolicName": "Flow",
+              "displayText": null,
+              "value": 162.435,
+              "unit": "m3/h"
+            },
+            {
+              "sensorId": 10,
+              "symbolicName": "speed",
+              "displayText": null,
+              "value": 39.417069,
+              "unit": "rpm"
+            },
+            {
+              "sensorId": 14,
+              "symbolicName": "temp",
+              "displayText": null,
+              "value": 18.592,
+              "unit": "degree"
+            },
+            {
+              "sensorId": 15,
+              "symbolicName": "pumpPower",
+              "displayText": null,
+              "value": 100,
+              "unit": "p"
+            },
+            {
+              "sensorId": 16,
+              "symbolicName": "efficiency",
+              "displayText": null,
+              "value": 428,
+              "unit": "eta"
+            },
+            {
+              "sensorId": 17,
+              "symbolicName": "npsh",
+              "displayText": null,
+              "value": 112,
+              "unit": "npsh"
+            }
+          ],
+          "sessionUid": "b1c0dd43-d457-4a47-9cb5-0488fb58b19b",
+          "snapshotUid": "2e70bc89-19e9-4606-a295-6ed82dc8eb64"
+        },
+        {
+          "name": "snapshot 5",
+          "normalisedDataArray": [
+            {
+              "sensorId": -1,
+              "symbolicName": "Head",
+              "displayText": null,
+              "value": 65.445,
+              "unit": "m"
+            },
+            {
+              "sensorId": 23,
+              "symbolicName": "Flow",
+              "displayText": null,
+              "value": 120.436,
+              "unit": "m3/h"
+            },
+            {
+              "sensorId": 10,
+              "symbolicName": "speed",
+              "displayText": null,
+              "value": 39.417069,
+              "unit": "rpm"
+            },
+            {
+              "sensorId": 14,
+              "symbolicName": "temp",
+              "displayText": null,
+              "value": 18.592,
+              "unit": "degree"
+            },
+            {
+              "sensorId": 15,
+              "symbolicName": "pumpPower",
+              "displayText": null,
+              "value": 80,
+              "unit": "p"
+            },
+            {
+              "sensorId": 16,
+              "symbolicName": "efficiency",
+              "displayText": null,
+              "value": 92,
+              "unit": "eta"
+            },
+            {
+              "sensorId": 17,
+              "symbolicName": "npsh",
+              "displayText": null,
+              "value": 70,
+              "unit": "npsh"
+            }
+          ],
+          "sessionUid": "b1c0dd43-d457-4a47-9cb5-0488fb58b19b",
+          "snapshotUid": "2e70bc89-19e9-4606-a295-6ed82dc8eb64"
+        },
+        {
+          "name": "snapshot 4",
+          "normalisedDataArray": [
+            {
+              "sensorId": -1,
+              "symbolicName": "Head",
+              "displayText": null,
+              "value": 76.52,
+              "unit": "m"
+            },
+            {
+              "sensorId": 23,
+              "symbolicName": "Flow",
+              "displayText": null,
+              "value": 92.234,
+              "unit": "m3/h"
+            },
+            {
+              "sensorId": 10,
+              "symbolicName": "speed",
+              "displayText": null,
+              "value": 39.417069,
+              "unit": "rpm"
+            },
+            {
+              "sensorId": 14,
+              "symbolicName": "temp",
+              "displayText": null,
+              "value": 18.592,
+              "unit": "degree"
+            },
+            {
+              "sensorId": 15,
+              "symbolicName": "pumpPower",
+              "displayText": null,
+              "value": 68,
+              "unit": "p"
+            },
+            {
+              "sensorId": 16,
+              "symbolicName": "efficiency",
+              "displayText": null,
+              "value": 52,
+              "unit": "eta"
+            },
+            {
+              "sensorId": 17,
+              "symbolicName": "npsh",
+              "displayText": null,
+              "value": 46,
+              "unit": "npsh"
+            }
+          ],
+          "sessionUid": "b1c0dd43-d457-4a47-9cb5-0488fb58b19b",
+          "snapshotUid": "2e70bc89-19e9-4606-a295-6ed82dc8eb64"
+        },
+        {
+          "name": "snapshot 3",
+          "normalisedDataArray": [
+            {
+              "sensorId": -1,
+              "symbolicName": "Head",
+              "displayText": null,
+              "value": 82.945,
+              "unit": "m"
+            },
+            {
+              "sensorId": 23,
+              "symbolicName": "Flow",
+              "displayText": null,
+              "value": 72.67,
+              "unit": "m3/h"
+            },
+            {
+              "sensorId": 10,
+              "symbolicName": "speed",
+              "displayText": null,
+              "value": 39.417069,
+              "unit": "rpm"
+            },
+            {
+              "sensorId": 14,
+              "symbolicName": "temp",
+              "displayText": null,
+              "value": 18.592,
+              "unit": "degree"
+            },
+            {
+              "sensorId": 15,
+              "symbolicName": "pumpPower",
+              "displayText": null,
+              "value": 54,
+              "unit": "p"
+            },
+            {
+              "sensorId": 16,
+              "symbolicName": "efficiency",
+              "displayText": null,
+              "value": 42,
+              "unit": "eta"
+            },
+            {
+              "sensorId": 17,
+              "symbolicName": "npsh",
+              "displayText": null,
+              "value": 28,
+              "unit": "npsh"
+            }
+          ],
+          "sessionUid": "b1c0dd43-d457-4a47-9cb5-0488fb58b19b",
+          "snapshotUid": "2e70bc89-19e9-4606-a295-6ed82dc8eb64"
+        },
+        {
+          "name": "snapshot 2",
+          "normalisedDataArray": [
+            {
+              "sensorId": -1,
+              "symbolicName": "Head",
+              "displayText": null,
+              "value": 86.842,
+              "unit": "m"
+            },
+            {
+              "sensorId": 23,
+              "symbolicName": "Flow",
+              "displayText": null,
+              "value": 52.67036,
+              "unit": "m3/h"
+            },
+            {
+              "sensorId": 10,
+              "symbolicName": "speed",
+              "displayText": null,
+              "value": 39.417069,
+              "unit": "rpm"
+            },
+            {
+              "sensorId": 14,
+              "symbolicName": "temp",
+              "displayText": null,
+              "value": 18.592,
+              "unit": "degree"
+            },
+            {
+              "sensorId": 15,
+              "symbolicName": "pumpPower",
+              "displayText": null,
+              "value": 45,
+              "unit": "p"
+            },
+            {
+              "sensorId": 16,
+              "symbolicName": "efficiency",
+              "displayText": null,
+              "value": 24,
+              "unit": "eta"
+            },
+            {
+              "sensorId": 17,
+              "symbolicName": "npsh",
+              "displayText": null,
+              "value": 20,
+              "unit": "npsh"
+            }
+          ],
+          "sessionUid": "b1c0dd43-d457-4a47-9cb5-0488fb58b19b",
+          "snapshotUid": "2e70bc89-19e9-4606-a295-6ed82dc8eb64"
+        },
+        {
+          "name": "snapshot 1",
+          "normalisedDataArray": [
+            {
+              "sensorId": -1,
+              "symbolicName": "Head",
+              "displayText": null,
+              "value": 90.245,
+              "unit": "m"
+            },
+            {
+              "sensorId": 23,
+              "symbolicName": "Flow",
+              "displayText": null,
+              "value": 32.66,
+              "unit": "m3/h"
+            },
+            {
+              "sensorId": 10,
+              "symbolicName": "speed",
+              "displayText": null,
+              "value": 29.417069,
+              "unit": "rpm"
+            },
+            {
+              "sensorId": 14,
+              "symbolicName": "temp",
+              "displayText": null,
+              "value": 28.592,
+              "unit": "degree"
+            },
+            {
+              "sensorId": 15,
+              "symbolicName": "pumpPower",
+              "displayText": null,
+              "value": 32,
+              "unit": "p"
+            },
+            {
+              "sensorId": 16,
+              "symbolicName": "efficiency",
+              "displayText": null,
+              "value": 1,
+              "unit": "eta"
+            },
+            {
+              "sensorId": 17,
+              "symbolicName": "npsh",
+              "displayText": null,
+              "value": 12,
+              "unit": "npsh"
+            }
+          ],
+          "sessionUid": "b1c0dd43-d457-4a47-9cb5-0488fb58b19b",
+          "snapshotUid": "2e70bc89-19e9-4606-a295-6ed82dc8eb64"
+        },
+        {
+          "name": "base",
+          "normalisedDataArray": [
+            {
+              "sensorId": -1,
+              "symbolicName": "Head",
+              "displayText": null,
+              "value": 0.94555327296257,
+              "unit": "m"
+            },
+            {
+              "sensorId": 23,
+              "symbolicName": "Flow",
+              "displayText": null,
+              "value": 0.67036885827952,
+              "unit": "m3/h"
+            },
+            {
+              "sensorId": 10,
+              "symbolicName": "speed",
+              "displayText": null,
+              "value": 0.41706901448452,
+              "unit": "rpm"
+            },
+            {
+              "sensorId": 14,
+              "symbolicName": "temp",
+              "displayText": null,
+              "value": 0.592303322919626,
+              "unit": "degree"
+            }
+          ],
+          "sessionUid": "b1c0dd43-d457-4a47-9cb5-0488fb58b19b",
+          "snapshotUid": "2e70bc89-19e9-4606-a295-6ed82dc8eb64"
+        }
+      ]
+    },
+    {
+      "project_id": 0,
+      "name": "M44271",
+      "date": "05/25/2020",
+      "configuration": "",
+      "notes": "",
+      "snapshots": [],
+      "id": 3
+    },
+    {
+      "project_id": 0,
+      "name": "M44272",
+      "date": "05/25/2020",
+      "configuration": "",
+      "notes": "aaa",
+      "snapshots": [],
+      "id": 4
+    },
+    {
+      "project_id": 0,
+      "name": "M44273",
+      "date": "05/25/2020",
+      "configuration": "",
+      "notes": "aaa",
+      "snapshots": [],
+      "id": 5
+    },
+    {
+      "project_id": 0,
+      "name": "M44274",
+      "date": "05/27/2020",
+      "configuration": "",
+      "notes": "",
+      "snapshots": [],
+      "id": 6
+    },
+    {
+      "project_id": 0,
+      "name": "M44275",
+      "date": "06/03/2020",
+      "configuration": "",
+      "notes": "",
+      "snapshots": [],
+      "id": 7
+    },
+    {
+      "project_id": 0,
+      "name": "M44276",
+      "date": "06/03/2020",
+      "configuration": "",
+      "notes": "",
+      "snapshots": [],
+      "id": 8
+    },
+    {
+      "project_id": 0,
+      "name": "M44277",
+      "date": "06/03/2020",
+      "configuration": "",
+      "notes": "",
+      "snapshots": [],
+      "id": 9
+    },
+    {
+      "project_id": 0,
+      "name": "M44278",
+      "date": "06/03/2020",
+      "configuration": "",
+      "notes": "",
+      "snapshots": [],
+      "id": 10
+    },
+    {
+      "id": 0,
+      "project_id": 1,
+      "name": "M1",
+      "date": "05/17/2020",
+      "configuration": "C_12245",
+      "notes": "Some notes",
+      "snapshots": [
+        {
+          "name": "snapshot 1",
+          "normalisedDataArray": [
+            {
+              "sensorId": -1,
+              "symbolicName": "Head",
+              "displayText": null,
+              "value": 40,
+              "unit": "m"
+            },
+            {
+              "sensorId": 23,
+              "symbolicName": "Flow",
+              "displayText": null,
+              "value": 120,
+              "unit": "m3/h"
+            },
+            {
+              "sensorId": 10,
+              "symbolicName": "speed",
+              "displayText": null,
+              "value": 29.417069,
+              "unit": "rpm"
+            },
+            {
+              "sensorId": 14,
+              "symbolicName": "temp",
+              "displayText": null,
+              "value": 28.592,
+              "unit": "degree"
+            }
+          ],
+          "sessionUid": "b1c0dd43-d457-4a47-9cb5-0488fb58b19b",
+          "snapshotUid": "2e70bc89-19e9-4606-a295-6ed82dc8eb64"
+        },
+        {
+          "name": "base",
+          "normalisedDataArray": [
+            {
+              "sensorId": -1,
+              "symbolicName": "Head",
+              "displayText": null,
+              "value": 0.94555327296257,
+              "unit": "m"
+            },
+            {
+              "sensorId": 23,
+              "symbolicName": "Flow",
+              "displayText": null,
+              "value": 0.67036885827952,
+              "unit": "m3/h"
+            },
+            {
+              "sensorId": 10,
+              "symbolicName": "speed",
+              "displayText": null,
+              "value": 0.41706901448452,
+              "unit": "rpm"
+            },
+            {
+              "sensorId": 14,
+              "symbolicName": "temp",
+              "displayText": null,
+              "value": 0.592303322919626,
+              "unit": "degree"
+            }
+          ],
+          "sessionUid": "b1c0dd43-d457-4a47-9cb5-0488fb58b19b",
+          "snapshotUid": "2e70bc89-19e9-4606-a295-6ed82dc8eb64"
+        }
+      ]
+    }
+  ],
+  "SAPData": {
+    "guaranteeData": [
+      {
+        "acceptanceGrade": "ISO 9906/HI 1B",
+        "volumeRateOfFlow": "150",
+        "volumeRateOfFlowUnit": "l/h",
+        "head": "80",
+        "headUnit": "m",
+        "pumpPower": "39",
+        "pumpPowerUnit": "m3/s",
+        "driverPower": "24",
+        "driverPowerUnit": "m3/s",
+        "efficiency": "99",
+        "efficiencyUnit": "η",
+        "speedOfRotation": "1200",
+        "speedOfRotationUnit": "rpm",
+        "npshr": "41",
+        "npshrUnit": "m",
+        "density": "0.5",
+        "densityUnit": "kg/m3",
+        "kinViscosity": "12",
+        "kinViscosityUnit": "m3/s",
+        "operatingTemperature": "21",
+        "operatingTemperatureUnit": " °C"
+      }
+    ]
+  },
+  "login": [
+    {
+      "id": "product_admin",
+      "accessToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjMiLCJyb2xlIjpbInByb2R1Y3RfYWRtaW4iXX0.V0MmeReS0QIIne9l2LeZKaWrXCK1g3Omt3IJb2_v2q4",
+      "refreshToken": "",
+      "expiresIn": "",
+      "refreshExpiresIn": ""
+    },
+    {
+      "id": "product_operator",
+      "accessToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI0NTYiLCJyb2xlIjpbInByb2R1Y3Rfb3BlcmF0b3IiXX0.4rMmujFkFHAIbVzAYvuGbbDl9EttPRJZZ7NjjA0S-v4",
+      "refreshToken": "",
+      "expiresIn": "",
+      "refreshExpiresIn": ""
+    }
+  ],
+  "users": [
+    {
+      "email": "product_admin@email.com",
+      "emailVerified": true,
+      "firstName": "product admin",
+      "lastName": "KSB",
+      "id": "123",
+      "userName": "product admin"
+    },
+    {
+      "email": "operator@email.com",
+      "emailVerified": true,
+      "firstName": "product operator",
+      "lastName": "KSB",
+      "id": "456",
+      "userName": "operator"
+    }
+  ],
+  "channels": [
+    {
+      "daqAuxdataId": "daqAuxdata 1",
+      "daqAuxdataUid": "daqAuxdata 21312",
+      "daquid": "daqaux1",
+      "sensorUid": "6561160d-1b9c-407b-b954-890d25b49449",
+      "channelNumber": "192.168.8.190",
+      "channelName": "456",
+      "channelUnit": "operator",
+      "format": "",
+      "length": "",
+      "precision": "",
+      "type": ""
+    }
+  ],
+  "dataChannels": [
+    {
+      "id": "1",
+      "channelUid": "cuid001",
+      "testbedConfigurationUid": "tbc001",
+      "channelNumber": "1000",
+      "channelName": "PName",
+      "channelType": "p",
+      "p_daq": "t2 - Daq2",
+      "p_channelId": "daqAuxdata 1 - 456",
+      "p_offset": "01",
+      "p_gain": "03",
+      "p_precision": "0.1",
+      "c_calculationlibraryId": "id01",
+      "c_calculationId": "id03",
+      "c_libraryinstance": "lib",
+      "selectedTestbed": "0083bfa2-40f0-49c6-92f1-fa6f8698d177",
+      "p_daq_Uid": "add05665-e07d-4f33-9ae8-70a5875f0e00",
+      "p_channelId_Uid": "6561160d-1b9c-407b-b954-890d25b49449"
+    },
+    {
+      "id": "2",
+      "channelUid": "cuid002",
+      "testbedConfigurationUid": "tbc002",
+      "channelNumber": 1001,
+      "channelName": "cName",
+      "channelType": "c",
+      "c_calculationlibraryId": "12_3213_2143",
+      "c_calculationId": "id03",
+      "c_libraryinstance": "cal 1 - cal desc",
+      "c_parametermap": "1004 - cName123",
+      "c_offset": "12",
+      "c_gain": "10",
+      "c_precision": "0.1",
+      "selectedTestbed": "0083bfa2-40f0-49c6-92f1-fa6f8698d177",
+      "c_parametermap_Uid": "cuid004",
+      "c_libraryinstance_Uid": {
+        "id": "cal 1",
+        "description": "cal desc",
+        "documented formula": "formu",
+        "outputvalue": "output 1",
+        "outputunit": "unit 1",
+        "inputvalues": [
+          "input 1",
+          "input 2"
+        ]
+      },
+      "produced_value": "output 1",
+      "input_values": [
+        "input 1",
+        "input 2"
+      ]
+    },
+    {
+      "id": "3",
+      "channelUid": "cuid003",
+      "testbedConfigurationUid": "tbc002",
+      "channelNumber": 1002,
+      "channelName": "cName123",
+      "channelType": "u",
+      "u_default": "42",
+      "u_key": "pipeSize",
+      "u_displayGroup": "group:group:group",
+      "u_mandatory": true,
+      "u_min_value": 0,
+      "u_max_value": 0,
+      "selectedTestbed": "0083bfa2-40f0-49c6-92f1-fa6f8698d177"
+    },
+    {
+      "id": "4",
+      "channelUid": "cuid004",
+      "testbedConfigurationUid": "tbc002",
+      "channelNumber": 1004,
+      "channelName": "cName123",
+      "channelType": "f",
+      "f_value": 0,
+      "f_key": "key",
+      "f_calculationLibrary": "UId",
+      "f_libraryinstance": "string"
+    },
+    {
+      "channelNumber": "1005",
+      "channelType": "f",
+      "selectedTestbed": "0083bfa2-40f0-49c6-92f1-fa6f8698d177",
+      "channelName": "cName",
+      "p_daq": "t2 - Daq2",
+      "p_daq_Uid": "add05665-e07d-4f33-9ae8-70a5875f0e00",
+      "p_channelId": "daqAuxdata 1 - 456",
+      "p_channelId_Uid": "6561160d-1b9c-407b-b954-890d25b49449",
+      "c_calculationlibraryId": "12_3213_2143",
+      "c_libraryinstance": "cal 1 - cal desc",
+      "c_libraryinstance_Uid": {
+        "id": "cal 1",
+        "description": "cal desc",
+        "documented formula": "formu",
+        "outputvalue": "output 1",
+        "outputunit": "unit 1",
+        "inputvalues": [
+          "input 1",
+          "input 2"
+        ]
+      },
+      "produced_value": "output 1",
+      "input_values": [
+        "input 1",
+        "input 2"
+      ],
+      "c_parametermap": "1000 - PName",
+      "c_parametermap_Uid": "cuid001",
+      "u_key": "123",
+      "u_displayGroup": "213",
+      "u_mandatory": true,
+      "u_default": "123",
+      "f_calculationLibrary": "12_3213_2143",
+      "f_libraryinstance": "cal 1 - cal desc",
+      "f_libraryinstance_Uid": {
+        "id": "cal 1",
+        "description": "cal desc",
+        "documented formula": "formu",
+        "outputvalue": "output 1",
+        "outputunit": "unit 1",
+        "inputvalues": [
+          "input 1",
+          "input 2"
+        ]
+      },
+      "f_value": "23",
+      "f_key": "32",
+      "id": "3jmrL-e"
+    }
+  ],
+  "calculationLibraries": {
+    "calculationlibraryIds": [
+      "12_3213_2143",
+      "12_3213_2144",
+      "12_3213_2145",
+      "12_3213_2146"
+    ]
+  },
+  "calculationlibraryById": {
+    "id": "12_3213_2143",
+    "precision": 0,
+    "valuestore": [
+      [
+        "string"
+      ]
+    ],
+    "calculations": [
+      {
+        "id": "cal 1",
+        "description": "cal desc",
+        "documented formula": "formu",
+        "outputvalue": "output 1",
+        "outputunit": "unit 1",
+        "inputvalues": [
+          "input 1",
+          "input 2"
+        ]
+      }
+    ]
+  }
+}

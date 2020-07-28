@@ -1,0 +1,16 @@
+version: '3.2'
+
+services:
+  sapdataapi:
+    image: digitalunit4ksb/sapdataapi:qual
+    container_name: sapdataapi_qual
+    environment:
+      - "SPRING_PROFILES_ACTIVE=qa"
+    ports:
+      - 7292:7292
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "10m"
+        max-file: "3"
+    restart: always

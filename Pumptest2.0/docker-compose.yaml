@@ -1,0 +1,196 @@
+version: '3.4'
+
+services:
+
+  ksb_pumptest2_zookeeper:
+    image: confluentinc/cp-zookeeper:5.3.1
+    environment:
+      ZOOKEEPER_CLIENT_PORT: 2181
+      ZOOKEEPER_TICK_TIME: 2000
+    restart: unless-stopped
+
+  ksb_pumptest2_kafka:
+    image: confluentinc/cp-kafka:5.3.1
+
+    environment:
+      KAFKA_BROKER_ID: 1
+      KAFKA_ZOOKEEPER_CONNECT: ksb_pumptest2_zookeeper:2181
+      KAFKA_ADVERTISED_LISTENERS: PLAINTEXT://ksb_pumptest2_kafka:29092,PLAINTEXT_HOST://ksb_pumptest2_kafka:9092
+      KAFKA_LISTENER_SECURITY_PROTOCOL_MAP: PLAINTEXT:PLAINTEXT,PLAINTEXT_HOST:PLAINTEXT
+      KAFKA_INTER_BROKER_LISTENER_NAME: PLAINTEXT
+      KAFKA_OFFSETS_TOPIC_REPLICATION_FACTOR: 1
+      KAFKA_CREATE_TOPICS: "rawdata:1:1, measurementdata:1:1,normaliseddata:1:1"
+    depends_on:
+      - ksb_pumptest2_zookeeper
+    volumes:
+      - ./SystemEnvironment/kafka/server_onpremise.properties:/etc/kafka/server.properties
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "10m"
+        max-file: "3"
+    restart: unless-stopped
+
+  ksb_pumptest2_keycloak:
+    image: jboss/keycloak:7.0.1
+    ports:
+      - "8884:8080"
+    volumes:
+      - ./pumptest2_realm_export.json:/pumptest2_realm_import.json
+    environment:
+      KEYCLOAK_USER: "${USERNAME}"
+      KEYCLOAK_PASSWORD: "${PASSWORD}"
+      KEYCLOAK_IMPORT: /pumptest2_realm_import.json
+    restart: unless-stopped
+
+  ksb_pumptest2_authenticationservice:
+    image: digitalunit4ksb/ksb_pumptest2_authenticationservice:develop
+
+    environment:
+      KSB_APPLICATIONSETTINGS__KEYCLOAKCONFIGS__TOKENMASTERREALMSERVICEURL: http://ksb_pumptest2_keycloak:8080/auth/realms/master/protocol/openid-connect/token
+      KSB_APPLICATIONSETTINGS__KEYCLOAKCONFIGS__AUTHSERVICEURL: http://ksb_pumptest2_keycloak:8080/auth/realms/Pumptest2/protocol/openid-connect/
+      KSB_APPLICATIONSETTINGS__KEYCLOAKCONFIGS__CLIENTADMINID: admin-cli
+      KSB_APPLICATIONSETTINGS__KEYCLOAKCONFIGS__CLIENTAPPID: ksb-app
+      KSB_APPLICATIONSETTINGS__KEYCLOAKCONFIGS__USERNAME: "${USERNAME}"
+      KSB_APPLICATIONSETTINGS__KEYCLOAKCONFIGS__PASSWORD: "${PASSWORD}"
+      KSB_APPLICATIONSETTINGS__KEYCLOAKCONFIGS__ADMINSERVICEURL: http://ksb_pumptest2_keycloak:8080/auth/admin/realms/Pumptest2/
+      KSB_APPLICATIONSETTINGS__JWTSETTINGS__AUTHORITY: http://ksb_pumptest2_keycloak:8080/auth/realms/Pumptest2
+      KSB_APPLICATIONSETTINGS__JWTSETTINGS__AUDIENCE: ksb-app
+      KSB_LOGGING__LOGLEVEL: Warning
+      KSB_SERILOG__MINIMUMLEVEL: Warning
+    depends_on:
+      - ksb_pumptest2_keycloak
+    restart: unless-stopped
+
+  ksb_pumptest2_configurationservice:
+    image: digitalunit4ksb/ksb_pumptest2_configurationservice:develop
+
+    environment:
+      KSB_APPLICATIONSETTINGS__KAFKASETTINGS__KAFKAHOSTANDPORT: ksb_pumptest2_kafka:29092
+      KSB_APPLICATIONSETTINGS__KAFKASETTINGS__KAFKAOUTPUTCHANNEL: rawdata
+      KSB_APPLICATIONSETTINGS__KAFKASETTINGS__KAFKAACTIONCHANNEL: commandmessage
+      KSB_APPLICATIONSETTINGS__JWTSETTINGS__AUTHORITY: http://ksb_pumptest2_keycloak:8080/auth/realms/Pumptest2
+      KSB_APPLICATIONSETTINGS__JWTSETTINGS__AUDIENCE: ksb-app
+      KSB_CONNECTIONSTRINGS__POSTGRESDBCONNECTION: "User ID =postgres;Password=admin;Server='${PGDBCS}';Port=5432;Database=PumpTestDb;Integrated Security=true;Pooling=true;"
+      KSB_LOGGING__LOGLEVEL: Warning
+      KSB_SERILOG__MINIMUMLEVEL: Warning
+      KSB_APPLICATIONSETTINGS__CALCULATIONLIBRARYPATH: /mnt/pumptest_calculationlibraries
+    volumes:
+      - ./calculationlibraries:/mnt/pumptest_calculationlibraries      
+      
+    depends_on:
+      - ksb_pumptest2_authenticationservice
+    restart: unless-stopped
+
+  ksb_pumptest2_ui_backend:
+    image: digitalunit4ksb/ksb_pumptest2_ui_backend:develop
+
+    environment:
+      KSB_APPLICATIONSETTINGS__KAFKASETTINGS__KAFKAHOSTANDPORT: ksb_pumptest2_kafka:29092
+      KSB_APPLICATIONSETTINGS__KAFKASETTINGS__KAFKAOUTPUTCHANNEL: rawdata
+      KSB_APPLICATIONSETTINGS__KAFKASETTINGS__KAFKAACTIONCHANNEL: commandmessage
+      KSB_APPLICATIONSETTINGS__JWTSETTINGS__AUTHORITY: http://ksb_pumptest2_keycloak:8080/auth/realms/Pumptest2
+      KSB_APPLICATIONSETTINGS__JWTSETTINGS__AUDIENCE: ksb-app
+      KSB_APPLICATIONSETTINGS__CONFIGURATIONSERVICE__HOSTURI: http://ksb_pumptest2_configurationservice:80
+      KSB_CONNECTIONSTRINGS__POSTGRESDBCONNECTION: "User ID =postgres;Password=admin;Server='${PGDBCS}';Port=5432;Database=PumpTestDb;Integrated Security=true;Pooling=true;"
+      KSB_LOGGING__LOGLEVEL: Warning
+      KSB_SERILOG__MINIMUMLEVEL: Warning
+    depends_on:
+      - ksb_pumptest2_authenticationservice
+      - ksb_pumptest2_configurationservice
+    restart: unless-stopped
+
+  ksb_pumptest2_ui:
+    image: digitalunit4ksb/ksb_pumptest2_ui:develop
+    ports:
+      - "8888:80"
+      - "443:443"
+    volumes:
+      - ./ui/certs:/etc/nginx/certs
+      - ./ui/nginx-vhost.conf:/etc/nginx/conf.d/nginx-vhost.conf
+    depends_on:
+      - ksb_pumptest2_authenticationservice
+      - ksb_pumptest2_configurationservice
+      - ksb_pumptest2_ui_backend
+      - json-server
+    restart: unless-stopped
+
+  json-server:
+    image: clue/json-server:latest
+
+    volumes:
+      - ./db.json:/data/db.json
+    restart: unless-stopped
+
+  ksb_pumptest2_enricher:
+    image: digitalunit4ksb/ksb_pumptest2_referenceimplementation:develop
+    environment:
+      DATASERVICE_OPTION: ENRICH
+      BOOTSTRAP_SERVER_CONFIG_IP: ksb_pumptest2_kafka
+      BOOTSTRAP_SERVER_CONFIG_PORT: 29092
+      TOPIC1: rawdata
+      TOPIC2: measurementdata
+      TOPIC3: commandmessage
+      KSB_APPLICATIONSETTINGS_SKIPCOUNTER: 2
+      LOG_LEVEL: warn
+      LOG_APPENDER: stdout
+    depends_on:
+      - ksb_pumptest2_datasourceservice
+    restart: unless-stopped
+
+  ksb_pumptest2_process:
+    image: digitalunit4ksb/ksb_pumptest2_referenceimplementation:develop
+    environment:
+      DATASERVICE_OPTION: PROCESS
+      BOOTSTRAP_SERVER_CONFIG_IP: ksb_pumptest2_kafka
+      BOOTSTRAP_SERVER_CONFIG_PORT: 29092
+      TOPIC1: measurementdata
+      TOPIC2: normaliseddata
+      TOPIC3: commandmessage
+      TOPIC4: snapshotdata
+      KSB_APPLICATIONSETTINGS_AUTHENTICATIONSERVICE_HOSTURI: http://ksb_pumptest2_authenticationservice:80
+      KSB_APPLICATIONSETTINGS_CONFIGURATIONNSERVICE_HOSTURI: http://ksb_pumptest2_configurationservice:80      
+      LOG_LEVEL: warn
+      LOG_APPENDER: stdout
+    volumes:
+      - ./tempconversion.json:/app/DataFiles/tempconversion.json
+      - ./temperatureconversionlibrary.1.json:/app/DataFiles/temperatureconversionlibrary.1.json
+      - ./pumptestlib.1.json:/app/DataFiles/pumptestlib.1.json
+    depends_on:
+      - ksb_pumptest2_datasourceservice
+      - ksb_pumptest2_enricher
+    restart: unless-stopped
+
+  ksb_pumptest2_datasourceservice:
+    image: digitalunit4ksb/ksb_pumptest2_datasourceservice:develop
+    environment:
+      KSB_APPLICATIONSETTINGS__GANTNERIP: 999.999.999.999
+      KSB_APPLICATIONSETTINGS__KAFKASETTINGS__KAFKAHOSTANDPORT: ksb_pumptest2_kafka:29092
+      KSB_APPLICATIONSETTINGS__KAFKASETTINGS__KAFKAOUTPUTCHANNEL: rawdata
+      KSB_APPLICATIONSETTINGS__KAFKASETTINGS__KAFKAACTIONCHANNEL: commandmessage
+      KSB_APPLICATIONSETTINGS__MOCKMODE: activated
+      KSB_APPLICATIONSETTINGS__DAQUID: add05665-e07d-4f33-9ae8-70a5875f0e00
+      KSB_LOGGING__LOGLEVEL: Warning
+      KSB_SERILOG__MINIMUMLEVEL: Warning
+    depends_on:
+      - ksb_pumptest2_kafka
+    volumes:
+      - ./pumptest2_measurements:/mnt/pumptest_measurement
+    restart: unless-stopped
+
+  ksb_pumptest2_datasourceservice2:
+    image: digitalunit4ksb/ksb_pumptest2_datasourceservice:develop
+    environment:
+      KSB_APPLICATIONSETTINGS__GANTNERIP: 999.999.999.999
+      KSB_APPLICATIONSETTINGS__KAFKASETTINGS__KAFKAHOSTANDPORT: ksb_pumptest2_kafka:29092
+      KSB_APPLICATIONSETTINGS__KAFKASETTINGS__KAFKAOUTPUTCHANNEL: rawdata
+      KSB_APPLICATIONSETTINGS__KAFKASETTINGS__KAFKAACTIONCHANNEL: commandmessage
+      KSB_APPLICATIONSETTINGS__MOCKMODE: activated
+      KSB_APPLICATIONSETTINGS__DAQUID: add05665-e07d-4f33-9ae8-70a5875f0e01
+      KSB_LOGGING__LOGLEVEL: Warning
+      KSB_SERILOG__MINIMUMLEVEL: Warning
+    depends_on:
+      - ksb_pumptest2_kafka
+    volumes:
+      - ./pumptest2_measurements:/mnt/pumptest_measurement
+    restart: unless-stopped
